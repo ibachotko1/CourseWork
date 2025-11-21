@@ -94,3 +94,10 @@ namespace SmartGreenhouse.Core.Invariants
         }
     }
 }
+
+
+
+
+
+
+
