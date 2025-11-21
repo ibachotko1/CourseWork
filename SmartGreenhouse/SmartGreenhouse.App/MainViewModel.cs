@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using SmartGreenhouse.Core.Models;
 using SmartGreenhouse.Core.Contracts;
 using SmartGreenhouse.Core.BooleanLogic;
+using System.Windows;
 using SmartGreenhouse.Core.WpCalculator;
 using SmartGreenhouse.Core.Invariants;
 using SmartGreenhouse.Services.ClimateControl;
@@ -52,6 +53,9 @@ namespace SmartGreenhouse.App
             // Инициализация ЛР3
             InitializeLoopData();
 
+            // Инициализация ЛР4
+            UpdateBooleanNumberExplanation();
+
             // Инициализация команд
             InitializeCommands();
 
@@ -95,10 +99,14 @@ namespace SmartGreenhouse.App
             ExecuteLoopAndShowResultCommand = new RelayCommand(ExecuteLoopAndShowResult, () => _loopChecker != null && _loopData != null && _loopData.Values != null && _loopData.Values.Count > 0);
             CheckVerificationConditionsCommand = new RelayCommand(CheckVerificationConditions);
             RunIrrigationCycleCommand = new RelayCommand(RunIrrigationCycle);
-            GenerateTruthTableCommand = new RelayCommand(GenerateTruthTable);
-            AnalyzeTruthTableCommand = new RelayCommand(AnalyzeTruthTable);
-            AnalyzeLightingLogicCommand = new RelayCommand(AnalyzeLightingLogic);
-            AnalyzeCorrelationsCommand = new RelayCommand(AnalyzeCorrelations);
+            // ЛР4: Команды для булевых функций
+            BuildTruthTableFromNumberCommand = new RelayCommand(BuildTruthTableFromNumber);
+            GenerateDNFFromNumberCommand = new RelayCommand(GenerateDNFFromNumber);
+            GenerateKNFFromNumberCommand = new RelayCommand(GenerateKNFFromNumber);
+            ParseAndEvaluateFormulaCommand = new RelayCommand(ParseAndEvaluateFormula);
+            CheckEquivalenceCommand = new RelayCommand(CheckEquivalence);
+            CopyBooleanResultCommand = new RelayCommand(CopyBooleanResult);
+            LoadExampleFormulaCommand = new RelayCommand<string>(LoadExampleFormula);
             OpenChartCommand = new RelayCommand(OpenChartWindow);
         }
 
@@ -455,11 +463,82 @@ namespace SmartGreenhouse.App
         public ICommand ExecuteLoopAndShowResultCommand { get; private set; }
         public ICommand CheckVerificationConditionsCommand { get; private set; }
 
-        private string _booleanLogicResult;
-        public string BooleanLogicResult
+        // ЛР4: Свойства для работы с булевыми функциями
+        private int _booleanN = 3;
+        public int BooleanN
         {
-            get => _booleanLogicResult;
-            set { _booleanLogicResult = value; OnPropertyChanged(); }
+            get => _booleanN;
+            set { _booleanN = value; OnPropertyChanged(); UpdateBooleanNumberExplanation(); }
+        }
+
+        private int _booleanNum = 11;
+        public int BooleanNum
+        {
+            get => _booleanNum;
+            set { _booleanNum = value; OnPropertyChanged(); UpdateBooleanNumberExplanation(); }
+        }
+
+        private string _booleanNumberExplanation = "";
+        public string BooleanNumberExplanation
+        {
+            get => _booleanNumberExplanation;
+            set { _booleanNumberExplanation = value; OnPropertyChanged(); }
+        }
+
+        private string _booleanNumberResult = "";
+        public string BooleanNumberResult
+        {
+            get => _booleanNumberResult;
+            set { _booleanNumberResult = value; OnPropertyChanged(); }
+        }
+
+        private string _booleanFormula = "";
+        public string BooleanFormula
+        {
+            get => _booleanFormula;
+            set { _booleanFormula = value; OnPropertyChanged(); }
+        }
+
+        private string _booleanFormulaInfo = "";
+        public string BooleanFormulaInfo
+        {
+            get => _booleanFormulaInfo;
+            set { _booleanFormulaInfo = value; OnPropertyChanged(); }
+        }
+
+        private string _booleanFormulaCost = "";
+        public string BooleanFormulaCost
+        {
+            get => _booleanFormulaCost;
+            set { _booleanFormulaCost = value; OnPropertyChanged(); }
+        }
+
+        private string _booleanFormulaResult = "";
+        public string BooleanFormulaResult
+        {
+            get => _booleanFormulaResult;
+            set { _booleanFormulaResult = value; OnPropertyChanged(); }
+        }
+
+        private string _booleanCompareFunction1 = "";
+        public string BooleanCompareFunction1
+        {
+            get => _booleanCompareFunction1;
+            set { _booleanCompareFunction1 = value; OnPropertyChanged(); }
+        }
+
+        private string _booleanCompareFunction2 = "";
+        public string BooleanCompareFunction2
+        {
+            get => _booleanCompareFunction2;
+            set { _booleanCompareFunction2 = value; OnPropertyChanged(); }
+        }
+
+        private string _booleanEquivalenceResult = "";
+        public string BooleanEquivalenceResult
+        {
+            get => _booleanEquivalenceResult;
+            set { _booleanEquivalenceResult = value; OnPropertyChanged(); }
         }
 
         private ChartWindow _chartWindow;
@@ -569,10 +648,14 @@ namespace SmartGreenhouse.App
         public ICommand ShowWpTriadCommand { get; private set; }
         public ICommand RunDataProcessingCommand { get; private set; }
         public ICommand RunIrrigationCycleCommand { get; private set; }
-        public ICommand GenerateTruthTableCommand { get; private set; }
-        public ICommand AnalyzeTruthTableCommand { get; private set; }
-        public ICommand AnalyzeLightingLogicCommand { get; private set; }
-        public ICommand AnalyzeCorrelationsCommand { get; private set; }
+        // ЛР4: Команды для булевых функций
+        public ICommand BuildTruthTableFromNumberCommand { get; private set; }
+        public ICommand GenerateDNFFromNumberCommand { get; private set; }
+        public ICommand GenerateKNFFromNumberCommand { get; private set; }
+        public ICommand ParseAndEvaluateFormulaCommand { get; private set; }
+        public ICommand CheckEquivalenceCommand { get; private set; }
+        public ICommand CopyBooleanResultCommand { get; private set; }
+        public ICommand LoadExampleFormulaCommand { get; private set; }
         public ICommand OpenChartCommand { get; private set; }
         #endregion
 
@@ -1305,37 +1388,350 @@ namespace SmartGreenhouse.App
             InvariantResult = "Цикл полива выполнен\nОбработаны все зоны полива с проверкой инвариантов";
         }
 
-        private void GenerateTruthTable()
+        // ЛР4: Методы для работы с булевыми функциями
+        private void UpdateBooleanNumberExplanation()
         {
-            var table = SensorLogic.GenerateTruthTable(3);
-            string result = "Таблица истинности (3 переменные):\n";
-
-            for (int i = 0; i < table.Count; i++)
+            if (BooleanN < 1 || BooleanN > 10)
             {
-                result += $"Строка {i}: {string.Join(", ", table[i].Select(b => b ? "1" : "0"))}\n";
+                BooleanNumberExplanation = "Количество переменных должно быть от 1 до 10";
+                return;
             }
 
-            BooleanLogicResult = result;
+            int maxNum = (1 << (1 << BooleanN)) - 1;
+            if (BooleanNum < 0 || BooleanNum > maxNum)
+            {
+                BooleanNumberExplanation = $"Номер функции должен быть от 0 до {maxNum}";
+                return;
+            }
+
+            int rowCount = 1 << BooleanN;
+            string binary = Convert.ToString(BooleanNum, 2).PadLeft(rowCount, '0');
+            
+            var explanation = new StringBuilder();
+            explanation.AppendLine($"Двоичное представление: {binary}₂ (длина {rowCount} бит)");
+            explanation.AppendLine();
+            explanation.AppendLine("Соответствие битов кортежам переменных:");
+            
+            for (int i = 0; i < rowCount; i++)
+            {
+                var values = new bool[BooleanN];
+                for (int j = 0; j < BooleanN; j++)
+                {
+                    values[j] = (i & (1 << j)) != 0;
+                }
+                string tuple = string.Join(", ", values.Select(v => v ? "1" : "0"));
+                bool bitValue = binary[binary.Length - 1 - i] == '1';
+                explanation.AppendLine($"  Бит {i} (позиция {binary.Length - 1 - i}): кортеж ({tuple}) → {bitValue}");
+            }
+
+            BooleanNumberExplanation = explanation.ToString();
         }
 
-        private void AnalyzeTruthTable()
+        private void BuildTruthTableFromNumber()
         {
-            var table = SensorLogic.GenerateTruthTable(2);
-            BooleanLogicResult = "Анализ таблицы истинности для логики полива:\n" +
-                                "A=Низкая влажность, B=Нет дождя → Полив=A∧B\n" +
-                                $"Всего комбинаций: {table.Count}";
+            try
+            {
+                if (BooleanN < 1 || BooleanN > 10)
+                {
+                    BooleanNumberResult = "Ошибка: количество переменных должно быть от 1 до 10";
+                    return;
+                }
+
+                int maxNum = (1 << (1 << BooleanN)) - 1;
+                if (BooleanNum < 0 || BooleanNum > maxNum)
+                {
+                    BooleanNumberResult = $"Ошибка: номер функции должен быть от 0 до {maxNum}";
+                    return;
+                }
+
+                var func = BooleanFunction.FromNumber(BooleanN, BooleanNum);
+                var table = func.BuildTruthTable();
+
+                var result = new StringBuilder();
+                result.AppendLine("ТАБЛИЦА ИСТИННОСТИ");
+                result.AppendLine(new string('=', 60));
+                result.AppendLine();
+
+                // Заголовок
+                result.Append(string.Format("{0,-8}", "№"));
+                for (int i = 0; i < BooleanN; i++)
+                {
+                    result.Append(string.Format("{0,-8}", table.VariableNames[i]));
+                }
+                result.AppendLine(string.Format("{0,-8}", "f"));
+                result.AppendLine(new string('-', 60));
+
+                // Строки таблицы
+                for (int i = 0; i < table.Rows.Count; i++)
+                {
+                    var row = table.Rows[i];
+                    result.Append(string.Format("{0,-8}", i));
+                    for (int j = 0; j < BooleanN; j++)
+                    {
+                        result.Append(string.Format("{0,-8}", row.Values[j] ? "1" : "0"));
+                    }
+                    result.AppendLine(string.Format("{0,-8}", row.Result ? "1" : "0"));
+                }
+
+                if (BooleanN > 5)
+                {
+                    result.AppendLine();
+                    result.AppendLine($"⚠ Предупреждение: сложность O(2^{BooleanN}) = {1 << BooleanN} строк");
+                }
+
+                BooleanNumberResult = result.ToString();
+            }
+            catch (Exception ex)
+            {
+                BooleanNumberResult = $"Ошибка: {ex.Message}";
+            }
         }
 
-        private void AnalyzeLightingLogic()
+        private void GenerateDNFFromNumber()
         {
-            _lightingService.AnalyzeLightingLogic();
-            BooleanLogicResult = "Проанализирована логика освещения\nСгенерирована таблица истинности для 4 переменных";
+            try
+            {
+                if (BooleanN < 1 || BooleanN > 10)
+                {
+                    BooleanNumberResult = "Ошибка: количество переменных должно быть от 1 до 10";
+                    return;
+                }
+
+                int maxNum = (1 << (1 << BooleanN)) - 1;
+                if (BooleanNum < 0 || BooleanNum > maxNum)
+                {
+                    BooleanNumberResult = $"Ошибка: номер функции должен быть от 0 до {maxNum}";
+                    return;
+                }
+
+                var func = BooleanFunction.FromNumber(BooleanN, BooleanNum);
+                string dnf = func.GenerateDNF();
+
+                var result = new StringBuilder();
+                result.AppendLine("ДИЗЪЮНКТИВНАЯ НОРМАЛЬНАЯ ФОРМА (DNF)");
+                result.AppendLine(new string('=', 60));
+                result.AppendLine();
+                result.AppendLine("Формула в базисе {¬, ∧, ∨}:");
+                result.AppendLine();
+                result.AppendLine(dnf);
+                result.AppendLine();
+                result.AppendLine("(Озвучка: отрицание, конъюнкция, дизъюнкция)");
+
+                BooleanNumberResult = result.ToString();
+            }
+            catch (Exception ex)
+            {
+                BooleanNumberResult = $"Ошибка: {ex.Message}";
+            }
         }
 
-        private void AnalyzeCorrelations()
+        private void GenerateKNFFromNumber()
         {
-            _sensorService.AnalyzeCorrelations();
-            BooleanLogicResult = "Проанализированы корреляции между параметрами\nВыявлены паттерны для вмешательства";
+            try
+            {
+                if (BooleanN < 1 || BooleanN > 10)
+                {
+                    BooleanNumberResult = "Ошибка: количество переменных должно быть от 1 до 10";
+                    return;
+                }
+
+                int maxNum = (1 << (1 << BooleanN)) - 1;
+                if (BooleanNum < 0 || BooleanNum > maxNum)
+                {
+                    BooleanNumberResult = $"Ошибка: номер функции должен быть от 0 до {maxNum}";
+                    return;
+                }
+
+                var func = BooleanFunction.FromNumber(BooleanN, BooleanNum);
+                string knf = func.GenerateKNF();
+
+                var result = new StringBuilder();
+                result.AppendLine("КОНЪЮНКТИВНАЯ НОРМАЛЬНАЯ ФОРМА (KNF)");
+                result.AppendLine(new string('=', 60));
+                result.AppendLine();
+                result.AppendLine("Формула в базисе {¬, ∧, ∨}:");
+                result.AppendLine();
+                result.AppendLine(knf);
+                result.AppendLine();
+                result.AppendLine("(Озвучка: отрицание, конъюнкция, дизъюнкция)");
+
+                BooleanNumberResult = result.ToString();
+            }
+            catch (Exception ex)
+            {
+                BooleanNumberResult = $"Ошибка: {ex.Message}";
+            }
+        }
+
+        private void ParseAndEvaluateFormula()
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(BooleanFormula))
+                {
+                    BooleanFormulaResult = "Ошибка: введите формулу";
+                    return;
+                }
+
+                var func = BooleanFunction.FromFormula(BooleanFormula);
+                var table = func.BuildTruthTable();
+
+                // Информация о формуле
+                var info = new StringBuilder();
+                info.AppendLine($"Количество переменных: {func.VariableCount}");
+                info.AppendLine($"Переменные: {string.Join(", ", func.VariableNames)}");
+                BooleanFormulaInfo = info.ToString();
+
+                // Стоимость формулы
+                var cost = BooleanFunction.CalculateCost(BooleanFormula);
+                BooleanFormulaCost = $"Стоимость формулы: {cost.Literals} литералов, {cost.Conjunctions} конъюнктов, {cost.Disjunctions} дизъюнктов";
+
+                // Таблица истинности
+                var result = new StringBuilder();
+                result.AppendLine("ТАБЛИЦА ИСТИННОСТИ");
+                result.AppendLine(new string('=', 60));
+                result.AppendLine();
+
+                // Заголовок
+                result.Append(string.Format("{0,-8}", "№"));
+                for (int i = 0; i < func.VariableCount; i++)
+                {
+                    result.Append(string.Format("{0,-8}", table.VariableNames[i]));
+                }
+                result.AppendLine(string.Format("{0,-8}", "f"));
+                result.AppendLine(new string('-', 60));
+
+                // Строки таблицы
+                for (int i = 0; i < table.Rows.Count; i++)
+                {
+                    var row = table.Rows[i];
+                    result.Append(string.Format("{0,-8}", i));
+                    for (int j = 0; j < func.VariableCount; j++)
+                    {
+                        result.Append(string.Format("{0,-8}", row.Values[j] ? "1" : "0"));
+                    }
+                    result.AppendLine(string.Format("{0,-8}", row.Result ? "1" : "0"));
+                }
+
+                result.AppendLine();
+                result.AppendLine("DNF (дизъюнктивная нормальная форма):");
+                result.AppendLine(func.GenerateDNF());
+                result.AppendLine();
+                result.AppendLine("KNF (конъюнктивная нормальная форма):");
+                result.AppendLine(func.GenerateKNF());
+
+                if (func.VariableCount > 5)
+                {
+                    result.AppendLine();
+                    result.AppendLine($"⚠ Предупреждение: сложность O(2^{func.VariableCount}) = {1 << func.VariableCount} строк");
+                }
+
+                BooleanFormulaResult = result.ToString();
+            }
+            catch (Exception ex)
+            {
+                BooleanFormulaResult = $"Ошибка парсинга: {ex.Message}";
+                BooleanFormulaInfo = "";
+                BooleanFormulaCost = "";
+            }
+        }
+
+        private void CheckEquivalence()
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(BooleanCompareFunction1) || string.IsNullOrWhiteSpace(BooleanCompareFunction2))
+                {
+                    BooleanEquivalenceResult = "Ошибка: введите обе функции для сравнения";
+                    return;
+                }
+
+                BooleanFunction func1, func2;
+
+                // Парсим первую функцию
+                if (int.TryParse(BooleanCompareFunction1.Trim(), out int num1))
+                {
+                    // Это номер функции - нужно определить n
+                    func1 = BooleanFunction.FromNumber(BooleanN, num1);
+                }
+                else
+                {
+                    func1 = BooleanFunction.FromFormula(BooleanCompareFunction1);
+                }
+
+                // Парсим вторую функцию
+                if (int.TryParse(BooleanCompareFunction2.Trim(), out int num2))
+                {
+                    func2 = BooleanFunction.FromNumber(BooleanN, num2);
+                }
+                else
+                {
+                    func2 = BooleanFunction.FromFormula(BooleanCompareFunction2);
+                }
+
+                var equivalenceResult = BooleanFunction.CheckEquivalence(func1, func2);
+                bool equivalent = equivalenceResult.Equivalent;
+                string counterExample = equivalenceResult.CounterExample;
+
+                var result = new StringBuilder();
+                result.AppendLine("ПРОВЕРКА ЭКВИВАЛЕНТНОСТИ");
+                result.AppendLine(new string('=', 60));
+                result.AppendLine();
+                result.AppendLine($"Функция 1: {BooleanCompareFunction1}");
+                result.AppendLine($"Функция 2: {BooleanCompareFunction2}");
+                result.AppendLine();
+
+                if (equivalent)
+                {
+                    result.AppendLine("✓ Функции ЭКВИВАЛЕНТНЫ");
+                }
+                else
+                {
+                    result.AppendLine("✗ Функции НЕ ЭКВИВАЛЕНТНЫ");
+                    if (!string.IsNullOrEmpty(counterExample))
+                    {
+                        result.AppendLine();
+                        result.AppendLine($"Первое контр-слово: {counterExample}");
+                    }
+                }
+
+                BooleanEquivalenceResult = result.ToString();
+            }
+            catch (Exception ex)
+            {
+                BooleanEquivalenceResult = $"Ошибка: {ex.Message}";
+            }
+        }
+
+        private void CopyBooleanResult()
+        {
+            string textToCopy = "";
+            
+            // Определяем, какая вкладка активна (упрощенно - копируем все результаты)
+            if (!string.IsNullOrEmpty(BooleanNumberResult))
+            {
+                textToCopy = BooleanNumberResult;
+            }
+            else if (!string.IsNullOrEmpty(BooleanFormulaResult))
+            {
+                textToCopy = BooleanFormulaResult;
+            }
+            else if (!string.IsNullOrEmpty(BooleanEquivalenceResult))
+            {
+                textToCopy = BooleanEquivalenceResult;
+            }
+
+            if (!string.IsNullOrEmpty(textToCopy))
+            {
+                System.Windows.Clipboard.SetText(textToCopy);
+                UpdateStatus("Результат скопирован в буфер обмена");
+            }
+        }
+
+        private void LoadExampleFormula(string formula)
+        {
+            BooleanFormula = formula;
+            UpdateStatus($"Загружен пример формулы: {formula}");
         }
 
         private void InitializeLoopData()

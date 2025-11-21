@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BooleanLogic\BooleanFunction.cs" />
+    <Compile Include="BooleanLogic\BooleanFunctionParser.cs" />
     <Compile Include="BooleanLogic\SensorLogic.cs" />
     <Compile Include="Contracts\GreenhouseOperation.cs" />
     <Compile Include="Invariants\ClimateControlLoop.cs" />

@@ -484,23 +484,385 @@
 
             <!-- ЛР4: Булевы функции -->
             <TabItem Header="ЛР4: Булевы функции">
-                <ScrollViewer>
+                <TabControl>
+                    <!-- Вкладка со справкой -->
+                    <TabItem Header="Справка">
+                        <ScrollViewer VerticalScrollBarVisibility="Auto">
+                            <StackPanel Margin="15">
+                                <TextBlock Text="Булевы функции в системе управления умной теплицей" 
+                                           FontSize="18" FontWeight="Bold" 
+                                           Foreground="#1B5E20" 
+                                           Margin="0,0,0,15"/>
+                                
+                                <TextBlock TextWrapping="Wrap" FontSize="12" Margin="0,0,0,15">
+                                    <Run Text="Система управления умной теплицей использует булевы функции для принятия решений о включении/выключении различных систем:" FontWeight="Bold"/>
+                                </TextBlock>
+                                
+                                <GroupBox Header="Примеры булевых функций в теплице" Margin="0,0,0,15">
+                                    <StackPanel Margin="10">
+                                        <TextBlock Text="1. Полив:" FontWeight="Bold" Margin="0,0,0,5"/>
+                                        <TextBlock Text="   Формула: Низкая влажность почвы" 
+                                                   FontFamily="Consolas" 
+                                                   Margin="20,0,0,10"/>
+                                        <TextBlock Text="   x1 = (влажность почвы &lt; 60%)" 
+                                                   FontFamily="Consolas" 
+                                                   Foreground="DarkBlue"
+                                                   Margin="20,0,0,15"/>
+                                        
+                                        <TextBlock Text="2. Обогрев:" FontWeight="Bold" Margin="0,0,0,5"/>
+                                        <TextBlock Text="   Формула: Низкая температура" 
+                                                   FontFamily="Consolas" 
+                                                   Margin="20,0,0,10"/>
+                                        <TextBlock Text="   x1 = (температура &lt; 15°C)" 
+                                                   FontFamily="Consolas" 
+                                                   Foreground="DarkBlue"
+                                                   Margin="20,0,0,15"/>
+                                        
+                                        <TextBlock Text="3. Вентиляция:" FontWeight="Bold" Margin="0,0,0,5"/>
+                                        <TextBlock Text="   Формула: Высокая температура ИЛИ высокий CO₂" 
+                                                   FontFamily="Consolas" 
+                                                   Margin="20,0,0,10"/>
+                                        <TextBlock Text="   x1 | x2, где x1=(температура &gt; 25°C), x2=(CO₂ &gt; 1200 ppm)" 
+                                                   FontFamily="Consolas" 
+                                                   Foreground="DarkBlue"
+                                                   Margin="20,0,0,15"/>
+                                        
+                                        <TextBlock Text="4. Освещение:" FontWeight="Bold" Margin="0,0,0,5"/>
+                                        <TextBlock Text="   Формула: Низкая освещенность ИЛИ (ночь И нужны саженцы)" 
+                                                   FontFamily="Consolas" 
+                                                   Margin="20,0,0,10"/>
+                                        <TextBlock Text="   x1 | (x2 &amp; x3), где x1=(освещенность &lt; 3000 lux), x2=ночь, x3=нужны саженцы" 
+                                                   FontFamily="Consolas" 
+                                                   Foreground="DarkBlue"
+                                                   Margin="20,0,0,15"/>
+                                        
+                                        <TextBlock Text="5. Сложная логика (импликация):" FontWeight="Bold" Margin="0,0,0,5"/>
+                                        <TextBlock Text="   Если включен полив, то должна быть нормальная температура" 
+                                                   FontFamily="Consolas" 
+                                                   Margin="20,0,0,10"/>
+                                        <TextBlock Text="   x1 -&gt; x2, где x1=полив включен, x2=(температура &gt; 5°C)" 
+                                                   FontFamily="Consolas" 
+                                                   Foreground="DarkBlue"
+                                                   Margin="20,0,0,15"/>
+                                    </StackPanel>
+                                </GroupBox>
+                                
+                                <GroupBox Header="Зачем нужны таблицы истинности и DNF/KNF?" Margin="0,0,0,15">
+                                    <StackPanel Margin="10">
+                                        <TextBlock TextWrapping="Wrap" Margin="0,0,0,10">
+                                            <Run Text="• Таблица истинности" FontWeight="Bold"/> показывает все возможные комбинации условий и результат принятия решения
+                                        </TextBlock>
+                                        <TextBlock TextWrapping="Wrap" Margin="0,0,0,10">
+                                            <Run Text="• DNF (дизъюнктивная нормальная форма)" FontWeight="Bold"/> показывает все случаи, когда система должна включиться
+                                        </TextBlock>
+                                        <TextBlock TextWrapping="Wrap" Margin="0,0,0,10">
+                                            <Run Text="• KNF (конъюнктивная нормальная форма)" FontWeight="Bold"/> показывает все случаи, когда система должна быть выключена
+                                        </TextBlock>
+                                        <TextBlock TextWrapping="Wrap" Margin="0,0,0,10">
+                                            <Run Text="• Проверка эквивалентности" FontWeight="Bold"/> позволяет убедиться, что разные формулировки логики дают одинаковый результат
+                                        </TextBlock>
+                                    </StackPanel>
+                                </GroupBox>
+                                
+                                <GroupBox Header="Примеры формул для тестирования">
+                                    <StackPanel Margin="10">
+                                        <TextBlock Text="Попробуйте эти формулы в вкладке 'По формуле':" FontWeight="Bold" Margin="0,0,0,10"/>
+                                        <TextBlock Text="• (x1 | x2) -&gt; x3  (если высокая температура ИЛИ высокий CO₂, то включить вентиляцию)" 
+                                                   FontFamily="Consolas" 
+                                                   Margin="20,0,0,5"/>
+                                        <TextBlock Text="• x1 &amp; !x2  (низкая влажность почвы И полив не включен)" 
+                                                   FontFamily="Consolas" 
+                                                   Margin="20,0,0,5"/>
+                                        <TextBlock Text="• (x1 ^ x2) = x3  (исключающее ИЛИ: либо обогрев, либо вентиляция, но не оба)" 
+                                                   FontFamily="Consolas" 
+                                                   Margin="20,0,0,5"/>
+                                    </StackPanel>
+                                </GroupBox>
+                            </StackPanel>
+                        </ScrollViewer>
+                    </TabItem>
+                    <!-- Вкладка "По номеру" -->
+                    <TabItem Header="По номеру">
+                        <ScrollViewer VerticalScrollBarVisibility="Auto">
+                            <Grid Margin="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+
+                                <!-- Ввод параметров -->
+                                <GroupBox Grid.Row="0" Header="Параметры функции" Margin="0,0,0,10">
+                                    <UniformGrid Columns="2" Margin="10">
+                                        <StackPanel Margin="5">
+                                            <TextBlock Text="Количество переменных (n):" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,5"/>
+                                            <TextBox Text="{Binding BooleanN, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,5"/>
+                                            <TextBlock Text="n ∈ [1..10]" FontSize="10" Foreground="Gray"/>
+                                        </StackPanel>
+                                        <StackPanel Margin="5">
+                                            <TextBlock Text="Номер функции (num):" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,5"/>
+                                            <TextBox Text="{Binding BooleanNum, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,5"/>
+                                            <TextBlock Text="num ∈ [0..2^(2^n)−1]" FontSize="10" Foreground="Gray"/>
+                                        </StackPanel>
+                                    </UniformGrid>
+                                </GroupBox>
+
+                                <!-- Пояснение -->
+                                <GroupBox Grid.Row="1" Header="Пояснение" Margin="0,0,0,10">
+                                    <StackPanel Margin="10">
+                                        <TextBlock Text="Связь с теплицей:" FontWeight="Bold" Margin="0,0,0,5"/>
+                                        <TextBlock Text="Номер функции определяет логику принятия решений. Например, функция может описывать условия включения полива, обогрева или вентиляции на основе комбинаций показаний датчиков." 
+                                                   TextWrapping="Wrap" 
+                                                   FontSize="10" 
+                                                   Foreground="DarkGreen"
+                                                   Margin="0,0,0,10"/>
+                                        <TextBlock Text="{Binding BooleanNumberExplanation}" 
+                                                   TextWrapping="Wrap" 
+                                                   FontSize="11"
+                                                   Margin="0,0,0,5"/>
+                                        <TextBlock Text="Двоичное представление num длиной 2^n соответствует значениям функции на всех кортежах переменных (от младшего бита к старшему)." 
+                                                   TextWrapping="Wrap" 
+                                                   FontSize="10" 
+                                                   Foreground="Gray"/>
+                                    </StackPanel>
+                                </GroupBox>
+
+                                <!-- Кнопки действий -->
+                                <GroupBox Grid.Row="2" Header="Действия" Margin="0,0,0,10">
+                                    <UniformGrid Columns="3" Margin="10">
+                                        <Button Content="Таблица истинности" 
+                                                Command="{Binding BuildTruthTableFromNumberCommand}"
+                                                Padding="15,8" 
+                                                FontSize="12" 
+                                                FontWeight="Bold"
+                                                Margin="5"/>
+                                        <Button Content="DNF" 
+                                                Command="{Binding GenerateDNFFromNumberCommand}"
+                                                Padding="15,8" 
+                                                FontSize="12" 
+                                                FontWeight="Bold"
+                                                Margin="5"/>
+                                        <Button Content="KNF" 
+                                                Command="{Binding GenerateKNFFromNumberCommand}"
+                                                Padding="15,8" 
+                                                FontSize="12" 
+                                                FontWeight="Bold"
+                                                Margin="5"/>
+                                    </UniformGrid>
+                                </GroupBox>
+
+                                <!-- Результаты -->
+                                <GroupBox Grid.Row="3" Header="Результаты">
+                                    <Grid Margin="10">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Button Grid.Row="0" Content="Скопировать в буфер" 
+                                                Command="{Binding CopyBooleanResultCommand}"
+                                                HorizontalAlignment="Right"
+                                                Padding="10,5"
+                                                Margin="0,0,0,5"/>
+                                        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                                            <TextBlock Text="{Binding BooleanNumberResult}" 
+                                                       TextWrapping="Wrap" 
+                                                       FontFamily="Consolas" 
+                                                       FontSize="11"/>
+                                        </ScrollViewer>
+                                    </Grid>
+                                </GroupBox>
+                            </Grid>
+                        </ScrollViewer>
+                    </TabItem>
+
+                    <!-- Вкладка "По формуле" -->
+                    <TabItem Header="По формуле">
+                        <ScrollViewer VerticalScrollBarVisibility="Auto">
+                            <Grid Margin="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+
+                                <!-- Ввод формулы -->
+                                <GroupBox Grid.Row="0" Header="Формула" Margin="0,0,0,10">
+                                    <StackPanel Margin="10">
+                                        <TextBlock Text="Введите булеву формулу (связь с теплицей):" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,5"/>
+                                        <TextBox Text="{Binding BooleanFormula, UpdateSourceTrigger=PropertyChanged}" 
+                                                 FontFamily="Consolas" 
+                                                 FontSize="12"
+                                                 MinHeight="40"
+                                                 TextWrapping="Wrap"
+                                                 AcceptsReturn="True"
+                                                 Margin="0,0,0,5"/>
+                                        <TextBlock Text="Операторы: !/not (отрицание), &amp;/and (конъюнкция), |/or (дизъюнкция), ^/xor (исключающее ИЛИ), -&gt; (импликация), = (эквивалентность)" 
+                                                   FontSize="10" 
+                                                   Foreground="Gray"
+                                                   TextWrapping="Wrap"/>
+                                        
+                                        <!-- Кнопки с примерами формул для теплицы -->
+                                        <TextBlock Text="Примеры формул для теплицы:" FontWeight="Bold" Margin="0,10,0,5"/>
+                                        <UniformGrid Columns="3" Margin="0,0,0,5">
+                                            <Button Content="Вентиляция: (x1 | x2)" 
+                                                    Command="{Binding LoadExampleFormulaCommand}"
+                                                    CommandParameter="(x1 | x2)"
+                                                    Padding="8,4"
+                                                    FontSize="10"
+                                                    Margin="2"/>
+                                            <Button Content="Полив: x1 &amp; !x2" 
+                                                    Command="{Binding LoadExampleFormulaCommand}"
+                                                    CommandParameter="x1 &amp; !x2"
+                                                    Padding="8,4"
+                                                    FontSize="10"
+                                                    Margin="2"/>
+                                            <Button Content="Импликация: (x1 | x2) -&gt; x3" 
+                                                    Command="{Binding LoadExampleFormulaCommand}"
+                                                    CommandParameter="(x1 | x2) -&gt; x3"
+                                                    Padding="8,4"
+                                                    FontSize="10"
+                                                    Margin="2"/>
+                                        </UniformGrid>
+                                        
+                                        <TextBlock Text="Где: x1=высокая температура, x2=высокий CO₂, x3=включить вентиляцию" 
+                                                   FontSize="9" 
+                                                   Foreground="DarkGray"
+                                                   FontStyle="Italic"
+                                                   Margin="0,5,0,0"/>
+                                    </StackPanel>
+                                </GroupBox>
+
+                                <!-- Кнопка разбора -->
+                                <GroupBox Grid.Row="1" Header="Действия" Margin="0,0,0,10">
+                                    <StackPanel Margin="10">
+                                        <Button Content="Разобрать и вычислить" 
+                                                Command="{Binding ParseAndEvaluateFormulaCommand}"
+                                                Padding="20,10" 
+                                                FontSize="14" 
+                                                FontWeight="Bold"
+                                                HorizontalAlignment="Left"/>
+                                    </StackPanel>
+                                </GroupBox>
+
+                                <!-- Информация о формуле -->
+                                <GroupBox Grid.Row="2" Header="Информация о формуле" Margin="0,0,0,10">
+                                    <StackPanel Margin="10">
+                                        <TextBlock Text="{Binding BooleanFormulaInfo}" 
+                                                   TextWrapping="Wrap" 
+                                                   FontSize="11"
+                                                   Margin="0,0,0,5"/>
+                                        <TextBlock Text="{Binding BooleanFormulaCost}" 
+                                                   TextWrapping="Wrap" 
+                                                   FontSize="11"
+                                                   FontWeight="Bold"
+                                                   Foreground="DarkBlue"/>
+                                    </StackPanel>
+                                </GroupBox>
+
+                                <!-- Результаты -->
+                                <GroupBox Grid.Row="3" Header="Результаты">
+                                    <Grid Margin="10">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Button Grid.Row="0" Content="Скопировать в буфер" 
+                                                Command="{Binding CopyBooleanResultCommand}"
+                                                HorizontalAlignment="Right"
+                                                Padding="10,5"
+                                                Margin="0,0,0,5"/>
+                                        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                                            <TextBlock Text="{Binding BooleanFormulaResult}" 
+                                                       TextWrapping="Wrap" 
+                                                       FontFamily="Consolas" 
+                                                       FontSize="11"/>
+                                        </ScrollViewer>
+                                    </Grid>
+                                </GroupBox>
+                            </Grid>
+                        </ScrollViewer>
+                    </TabItem>
+
+                    <!-- Вкладка "Сравнение" -->
+                    <TabItem Header="Сравнение">
+                        <ScrollViewer VerticalScrollBarVisibility="Auto">
+                            <Grid Margin="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+
+                                <!-- Ввод функций -->
+                                <GroupBox Grid.Row="0" Header="Функции для сравнения" Margin="0,0,0,10">
                     <StackPanel Margin="10">
-                        <TextBlock Text="Булева логика и таблицы истинности:" 
-                                   Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,10"/>
+                                        <TextBlock Text="Сравнение логики принятия решений:" FontWeight="Bold" Margin="0,0,0,5"/>
+                                        <TextBlock Text="Проверьте, эквивалентны ли две формулировки логики управления теплицей. Например, сравните прямую формулу с её DNF-представлением." 
+                                                   TextWrapping="Wrap" 
+                                                   FontSize="10" 
+                                                   Foreground="DarkGreen"
+                                                   Margin="0,0,0,10"/>
+                                        <UniformGrid Columns="2" Margin="0,0,0,0">
+                                            <StackPanel Margin="5">
+                                                <TextBlock Text="Функция 1 (номер или формула):" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,5"/>
+                                                <TextBox Text="{Binding BooleanCompareFunction1, UpdateSourceTrigger=PropertyChanged}" 
+                                                         FontFamily="Consolas" 
+                                                         FontSize="11"
+                                                         MinHeight="60"
+                                                         TextWrapping="Wrap"
+                                                         AcceptsReturn="True"
+                                                         Margin="0,0,0,5"/>
+                                                <TextBlock Text="Пример: 11 или (x1 &amp; !x2) | x3" 
+                                                           FontSize="9" 
+                                                           Foreground="Gray"/>
+                                            </StackPanel>
+                                            <StackPanel Margin="5">
+                                                <TextBlock Text="Функция 2 (номер или формула):" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,5"/>
+                                                <TextBox Text="{Binding BooleanCompareFunction2, UpdateSourceTrigger=PropertyChanged}" 
+                                                         FontFamily="Consolas" 
+                                                         FontSize="11"
+                                                         MinHeight="60"
+                                                         TextWrapping="Wrap"
+                                                         AcceptsReturn="True"
+                                                         Margin="0,0,0,5"/>
+                                                <TextBlock Text="Пример: DNF от функции 1" 
+                                                           FontSize="9" 
+                                                           Foreground="Gray"/>
+                                            </StackPanel>
+                                        </UniformGrid>
+                                    </StackPanel>
+                                </GroupBox>
 
-                        <Button Content="Сгенерировать таблицу истинности" Command="{Binding GenerateTruthTableCommand}"
-                                Padding="10,5" Margin="0,5"/>
-                        <Button Content="Анализ логики освещения" Command="{Binding AnalyzeLightingLogicCommand}"
-                                Padding="10,5" Margin="0,5"/>
-                        <Button Content="Анализ корреляций" Command="{Binding AnalyzeCorrelationsCommand}"
-                                Padding="10,5" Margin="0,5"/>
+                                <!-- Кнопка сравнения -->
+                                <GroupBox Grid.Row="1" Header="Действия" Margin="0,0,0,10">
+                                    <StackPanel Margin="10">
+                                        <Button Content="Эквивалентны?" 
+                                                Command="{Binding CheckEquivalenceCommand}"
+                                                Padding="20,10" 
+                                                FontSize="14" 
+                                                FontWeight="Bold"
+                                                HorizontalAlignment="Left"/>
+                                    </StackPanel>
+                                </GroupBox>
 
-                        <TextBlock Text="Результат:" Style="{StaticResource HeaderTextStyle}" Margin="0,10,0,5"/>
-                        <TextBox Text="{Binding BooleanLogicResult}" IsReadOnly="True" MinHeight="100" 
-                                 TextWrapping="Wrap" FontFamily="Consolas" FontSize="10"/>
+                                <!-- Результат сравнения -->
+                                <GroupBox Grid.Row="2" Header="Результат сравнения">
+                                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                                        <StackPanel Margin="10">
+                                            <TextBlock Text="{Binding BooleanEquivalenceResult}" 
+                                                       TextWrapping="Wrap" 
+                                                       FontFamily="Consolas" 
+                                                       FontSize="12"
+                                                       FontWeight="Bold"/>
                     </StackPanel>
                 </ScrollViewer>
+                                </GroupBox>
+                            </Grid>
+                        </ScrollViewer>
+                    </TabItem>
+                </TabControl>
             </TabItem>
         </TabControl>
 
