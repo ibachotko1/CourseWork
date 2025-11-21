@@ -77,8 +77,7 @@ namespace SmartGreenhouse.Services.ClimateControl
 
         public bool ShouldVentilate(SensorData data)
         {
-            // Формула: (Высокая температура ИЛИ высокий CO2) И не идет дождь
-            return (data.Temperature > 28.0 || data.CO2Level > 1500) && !data.IsRaining;
+            return (data.Temperature > 28.0 || data.CO2Level > 1500);
         }
 
         public bool ShouldEnrichCO2(SensorData data)
@@ -139,9 +138,7 @@ namespace SmartGreenhouse.Services.ClimateControl
 
         public override bool CheckPreConditions(SensorData data, ActuatorStatus actuators)
         {
-            return !actuators.Ventilation &&
-                   data.Temperature > 25.0 &&
-                   !data.IsRaining;
+            return data.CO2Level < 1000.0;
         }
 
         public override void Execute(SensorData data, ActuatorStatus actuators)

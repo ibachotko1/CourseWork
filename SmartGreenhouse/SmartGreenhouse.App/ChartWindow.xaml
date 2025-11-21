@@ -1,0 +1,145 @@
+<Window x:Class="SmartGreenhouse.App.ChartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="График параметров" Height="600" Width="1000"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="График изменения параметров в реальном времени" 
+                   FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <UniformGrid Columns="2" Margin="5">
+                <Border BorderBrush="Gray" BorderThickness="1" Background="White" Margin="5" Padding="5">
+                    <StackPanel>
+                        <TextBlock Text="Температура, °C" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,5" Foreground="Red"/>
+                        <Grid>
+                            <Canvas Height="150" Width="450" Background="White">
+                                <Line X1="30" Y1="0" X2="30" Y2="150" Stroke="LightGray" StrokeThickness="1"/>
+                                <Line X1="30" Y1="150" X2="450" Y2="150" Stroke="LightGray" StrokeThickness="1"/>
+                                <Polyline Stroke="Red" StrokeThickness="2" Points="{Binding TemperaturePoints}"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="0" Text="{Binding TemperatureMax}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="25" Text="{Binding TemperatureScale5}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="50" Text="{Binding TemperatureScale4}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="75" Text="{Binding TemperatureScale3}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="100" Text="{Binding TemperatureScale2}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="125" Text="{Binding TemperatureScale1}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="140" Text="{Binding TemperatureMin}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="15" Canvas.Top="75" Text="°C" FontSize="8" Foreground="Gray" RenderTransformOrigin="0.5,0.5">
+                                    <TextBlock.RenderTransform>
+                                        <RotateTransform Angle="-90"/>
+                                    </TextBlock.RenderTransform>
+                                </TextBlock>
+                            </Canvas>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+
+                <Border BorderBrush="Gray" BorderThickness="1" Background="White" Margin="5" Padding="5">
+                    <StackPanel>
+                        <TextBlock Text="Влажность воздуха, %" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,5" Foreground="Blue"/>
+                        <Grid>
+                            <Canvas Height="150" Width="450" Background="White">
+                                <Line X1="30" Y1="0" X2="30" Y2="150" Stroke="LightGray" StrokeThickness="1"/>
+                                <Line X1="30" Y1="150" X2="450" Y2="150" Stroke="LightGray" StrokeThickness="1"/>
+                                <Polyline Stroke="Blue" StrokeThickness="2" Points="{Binding HumidityPoints}"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="0" Text="{Binding HumidityMax}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="25" Text="{Binding HumidityScale5}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="50" Text="{Binding HumidityScale4}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="75" Text="{Binding HumidityScale3}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="100" Text="{Binding HumidityScale2}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="125" Text="{Binding HumidityScale1}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="140" Text="{Binding HumidityMin}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="15" Canvas.Top="75" Text="%" FontSize="8" Foreground="Gray" RenderTransformOrigin="0.5,0.5">
+                                    <TextBlock.RenderTransform>
+                                        <RotateTransform Angle="-90"/>
+                                    </TextBlock.RenderTransform>
+                                </TextBlock>
+                            </Canvas>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+
+                <Border BorderBrush="Gray" BorderThickness="1" Background="White" Margin="5" Padding="5">
+                    <StackPanel>
+                        <TextBlock Text="Влажность почвы, %" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,5" Foreground="Green"/>
+                        <Grid>
+                            <Canvas Height="150" Width="450" Background="White">
+                                <Line X1="30" Y1="0" X2="30" Y2="150" Stroke="LightGray" StrokeThickness="1"/>
+                                <Line X1="30" Y1="150" X2="450" Y2="150" Stroke="LightGray" StrokeThickness="1"/>
+                                <Polyline Stroke="Green" StrokeThickness="2" Points="{Binding SoilMoisturePoints}"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="0" Text="{Binding SoilMoistureMax}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="25" Text="{Binding SoilMoistureScale5}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="50" Text="{Binding SoilMoistureScale4}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="75" Text="{Binding SoilMoistureScale3}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="100" Text="{Binding SoilMoistureScale2}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="125" Text="{Binding SoilMoistureScale1}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="140" Text="{Binding SoilMoistureMin}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="15" Canvas.Top="75" Text="%" FontSize="8" Foreground="Gray" RenderTransformOrigin="0.5,0.5">
+                                    <TextBlock.RenderTransform>
+                                        <RotateTransform Angle="-90"/>
+                                    </TextBlock.RenderTransform>
+                                </TextBlock>
+                            </Canvas>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+
+                <Border BorderBrush="Gray" BorderThickness="1" Background="White" Margin="5" Padding="5">
+                    <StackPanel>
+                        <TextBlock Text="Уровень CO₂, ppm" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,5" Foreground="Orange"/>
+                        <Grid>
+                            <Canvas Height="150" Width="450" Background="White">
+                                <Line X1="30" Y1="0" X2="30" Y2="150" Stroke="LightGray" StrokeThickness="1"/>
+                                <Line X1="30" Y1="150" X2="450" Y2="150" Stroke="LightGray" StrokeThickness="1"/>
+                                <Polyline Stroke="Orange" StrokeThickness="2" Points="{Binding CO2Points}"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="0" Text="{Binding CO2Max}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="25" Text="{Binding CO2Scale5}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="50" Text="{Binding CO2Scale4}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="75" Text="{Binding CO2Scale3}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="100" Text="{Binding CO2Scale2}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="125" Text="{Binding CO2Scale1}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="140" Text="{Binding CO2Min}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="15" Canvas.Top="75" Text="ppm" FontSize="8" Foreground="Gray" RenderTransformOrigin="0.5,0.5">
+                                    <TextBlock.RenderTransform>
+                                        <RotateTransform Angle="-90"/>
+                                    </TextBlock.RenderTransform>
+                                </TextBlock>
+                            </Canvas>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+
+                <Border BorderBrush="Gray" BorderThickness="1" Background="White" Margin="5" Padding="5">
+                    <StackPanel>
+                        <TextBlock Text="Освещенность, lux" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,5" Foreground="Purple"/>
+                        <Grid>
+                            <Canvas Height="150" Width="450" Background="White">
+                                <Line X1="30" Y1="0" X2="30" Y2="150" Stroke="LightGray" StrokeThickness="1"/>
+                                <Line X1="30" Y1="150" X2="450" Y2="150" Stroke="LightGray" StrokeThickness="1"/>
+                                <Polyline Stroke="Purple" StrokeThickness="2" Points="{Binding LightPoints}"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="0" Text="{Binding LightMax}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="25" Text="{Binding LightScale5}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="50" Text="{Binding LightScale4}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="75" Text="{Binding LightScale3}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="100" Text="{Binding LightScale2}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="125" Text="{Binding LightScale1}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="2" Canvas.Top="140" Text="{Binding LightMin}" FontSize="8" Foreground="Gray"/>
+                                <TextBlock Canvas.Left="15" Canvas.Top="75" Text="lux" FontSize="8" Foreground="Gray" RenderTransformOrigin="0.5,0.5">
+                                    <TextBlock.RenderTransform>
+                                        <RotateTransform Angle="-90"/>
+                                    </TextBlock.RenderTransform>
+                                </TextBlock>
+                            </Canvas>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+            </UniformGrid>
+        </ScrollViewer>
+    </Grid>
+</Window>
+

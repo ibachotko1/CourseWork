@@ -44,10 +44,12 @@
     <Compile Include="BooleanLogic\SensorLogic.cs" />
     <Compile Include="Contracts\GreenhouseOperation.cs" />
     <Compile Include="Invariants\ClimateControlLoop.cs" />
+    <Compile Include="Invariants\LoopInvariantChecker.cs" />
     <Compile Include="Models\ActuatorStatus.cs" />
     <Compile Include="Models\SensorData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WpCalculator\WpEngine.cs" />
+    <Compile Include="WpCalculator\WpFragment.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

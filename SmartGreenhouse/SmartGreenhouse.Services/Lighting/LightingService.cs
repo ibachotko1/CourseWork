@@ -59,17 +59,7 @@ namespace SmartGreenhouse.Services.Lighting
         // ЛР4: Булевы функции для освещения
         public bool ShouldTurnOnLights(SensorData data)
         {
-            // Используем время из данных, а не системное время
-            bool isNight = IsNightTime(data.Timestamp);
-            bool isDay = !isNight;
-            bool isCloudy = IsCloudy(data);
-
-            // Формула: (Низкая естественная освещенность И (ночь ИЛИ пасмурно)) ИЛИ
-            //          (Рассада требует досветки) ИЛИ
-            //          (По расписанию И не день)
-            return (data.LightIntensity < 1000 && (isNight || isCloudy)) ||
-                   (NeedsSeedlingLight() && isNight) ||
-                   (_schedule.ShouldBeOn(data.Timestamp) && !isDay);
+            return data.LightIntensity < 3000;
         }
 
         public void SetLightingSchedule(TimeSpan start, TimeSpan end, double intensity)
@@ -125,8 +115,7 @@ namespace SmartGreenhouse.Services.Lighting
 
         public override bool CheckPreConditions(SensorData data, ActuatorStatus actuators)
         {
-            return !actuators.Lights &&
-                   data.LightIntensity < 10000; // Только если естественного света мало
+            return data.LightIntensity < 3000.0; // Ниже нормы 3000-5000 lux
         }
 
         public override void Execute(SensorData data, ActuatorStatus actuators)

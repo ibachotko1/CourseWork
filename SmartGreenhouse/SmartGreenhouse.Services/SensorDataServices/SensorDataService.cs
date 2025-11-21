@@ -54,7 +54,6 @@ namespace SmartGreenhouse.Services.SensorDataServices
                 SoilMoisture = recentReadings.Average(r => r.SoilMoisture),
                 CO2Level = recentReadings.Average(r => r.CO2Level),
                 LightIntensity = recentReadings.Average(r => r.LightIntensity),
-                IsRaining = recentReadings.Any(r => r.IsRaining),
                 Timestamp = DateTime.Now
             };
         }

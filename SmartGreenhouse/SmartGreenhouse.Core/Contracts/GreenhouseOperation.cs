@@ -47,10 +47,7 @@ namespace SmartGreenhouse.Core.Contracts
         // ЛР1: Реализация предусловий
         public override bool CheckPreConditions(SensorData data, ActuatorStatus actuators)
         {
-            return data.SoilMoisture < 30.0 &&    // Почва сухая
-                   !data.IsRaining &&             // Не идет дождь
-                   data.Temperature > 5.0 &&      // Выше точки замерзания
-                   !actuators.WaterValve;         // Полив еще не включен
+            return data.SoilMoisture < 60.0;    // Почва сухая (ниже нормы 60-70%)
         }
 
         public override void Execute(SensorData data, ActuatorStatus actuators)
@@ -77,8 +74,7 @@ namespace SmartGreenhouse.Core.Contracts
 
         public override bool CheckPreConditions(SensorData data, ActuatorStatus actuators)
         {
-            return data.Temperature < 15.0 &&     // Холодно
-                   !actuators.Heater;            // Обогрев выключен
+            return data.Temperature < 15.0;     // Холодно (ниже нормы 15-25°C)
         }
 
         public override void Execute(SensorData data, ActuatorStatus actuators)
