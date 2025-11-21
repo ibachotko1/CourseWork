@@ -1,0 +1,9 @@
+C:\Users\user\Source\Repos\CourseWork\SmartGreenhouse\SmartGreenhouse.Services\bin\Debug\SmartGreenhouse.Services.dll
+C:\Users\user\Source\Repos\CourseWork\SmartGreenhouse\SmartGreenhouse.Services\bin\Debug\SmartGreenhouse.Services.pdb
+C:\Users\user\Source\Repos\CourseWork\SmartGreenhouse\SmartGreenhouse.Services\bin\Debug\SmartGreenhouse.Core.dll
+C:\Users\user\Source\Repos\CourseWork\SmartGreenhouse\SmartGreenhouse.Services\bin\Debug\SmartGreenhouse.Core.pdb
+C:\Users\user\Source\Repos\CourseWork\SmartGreenhouse\SmartGreenhouse.Services\obj\Debug\SmartGreenhouse.Services.csproj.AssemblyReference.cache
+C:\Users\user\Source\Repos\CourseWork\SmartGreenhouse\SmartGreenhouse.Services\obj\Debug\SmartGreenhouse.Services.csproj.CoreCompileInputs.cache
+C:\Users\user\Source\Repos\CourseWork\SmartGreenhouse\SmartGreenhouse.Services\obj\Debug\SmartGre.CB588DDF.Up2Date
+C:\Users\user\Source\Repos\CourseWork\SmartGreenhouse\SmartGreenhouse.Services\obj\Debug\SmartGreenhouse.Services.dll
+C:\Users\user\Source\Repos\CourseWork\SmartGreenhouse\SmartGreenhouse.Services\obj\Debug\SmartGreenhouse.Services.pdb
