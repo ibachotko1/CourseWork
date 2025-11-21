@@ -59,14 +59,11 @@ namespace SmartGreenhouse.Services.Irrigation
         }
 
         // ЛР4: Сложная булева функция для полива
-        internal bool ShouldIrrigate(SensorData data) // Изменено с private на internal
+        internal bool ShouldIrrigate(SensorData data)
         {
-            // Формула: (Низкая влажность почвы И нет дождя) ИЛИ 
-            //          (Утро И средняя влажность И нет дождя) ИЛИ
-            //          (Высокая температура И низкая влажность воздуха И нет дождя)
-            return (data.SoilMoisture < 30.0 && !data.IsRaining) ||
-                   (IsMorning(data.Timestamp) && data.SoilMoisture < 50.0 && !data.IsRaining) ||
-                   (data.Temperature > 25.0 && data.Humidity < 40.0 && !data.IsRaining);
+            return (data.SoilMoisture < 30.0) ||
+                   (IsMorning(data.Timestamp) && data.SoilMoisture < 50.0) ||
+                   (data.Temperature > 25.0 && data.Humidity < 40.0);
         }
 
         private void InitializeZones()

@@ -17,7 +17,6 @@ namespace SmartGreenhouse.Tests.Core
             Assert.Equal(0, sensorData.SoilMoisture);
             Assert.Equal(0, sensorData.CO2Level);
             Assert.Equal(0, sensorData.LightIntensity);
-            Assert.False(sensorData.IsRaining);
             Assert.Equal(DateTime.MinValue, sensorData.Timestamp);
         }
 
@@ -34,7 +33,6 @@ namespace SmartGreenhouse.Tests.Core
             sensorData.SoilMoisture = 40.5;
             sensorData.CO2Level = 450.5;
             sensorData.LightIntensity = 10000.5;
-            sensorData.IsRaining = true;
             sensorData.Timestamp = timestamp;
 
             // Assert
@@ -43,7 +41,6 @@ namespace SmartGreenhouse.Tests.Core
             Assert.Equal(40.5, sensorData.SoilMoisture);
             Assert.Equal(450.5, sensorData.CO2Level);
             Assert.Equal(10000.5, sensorData.LightIntensity);
-            Assert.True(sensorData.IsRaining);
             Assert.Equal(timestamp, sensorData.Timestamp);
         }
 

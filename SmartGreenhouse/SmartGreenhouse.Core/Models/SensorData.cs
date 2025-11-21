@@ -12,7 +12,6 @@ namespace SmartGreenhouse.Core.Models
         public double SoilMoisture { get; set; }       // %
         public double CO2Level { get; set; }           // ppm
         public double LightIntensity { get; set; }     // lux
-        public bool IsRaining { get; set; }           // Дождь
         public DateTime Timestamp { get; set; }
     }
 }

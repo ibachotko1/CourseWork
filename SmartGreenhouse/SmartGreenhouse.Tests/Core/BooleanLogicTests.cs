@@ -32,17 +32,15 @@ namespace SmartGreenhouse.Tests.Core
         }
 
         [Theory]
-        [InlineData(25.0, false, true)]   // Низкая влажность почвы + нет дождя
-        [InlineData(40.0, false, false)]  // Средняя влажность
-        [InlineData(25.0, true, false)]   // Низкая влажность + дождь
-        [InlineData(60.0, false, false)]  // Высокая влажность
-        public void ShouldTurnOnWater_CorrectConditions(double soilMoisture, bool isRaining, bool expected)
+        [InlineData(25.0, true)]   // Низкая влажность почвы
+        [InlineData(40.0, false)]  // Средняя влажность
+        [InlineData(60.0, false)]  // Высокая влажность
+        public void ShouldTurnOnWater_CorrectConditions(double soilMoisture, bool expected)
         {
             // Arrange
             var data = new SensorData
             {
-                SoilMoisture = soilMoisture,
-                IsRaining = isRaining
+                SoilMoisture = soilMoisture
             };
             var actuators = new ActuatorStatus();
 

@@ -38,17 +38,16 @@ namespace SmartGreenhouse.Tests.Services
         }
 
         [Theory]
-        [InlineData(29.0, 1600, false, true)]   // Высокая температура + вентиляция
-        [InlineData(20.0, 1600, true, false)]   // Высокий CO2 + дождь
-        [InlineData(20.0, 1200, false, false)]  // Нормальные условия
-        public void ShouldVentilate_ReturnsCorrectValue(double temperature, double co2, bool raining, bool expected)
+        [InlineData(29.0, 1600, true)]   // Высокая температура + вентиляция
+        [InlineData(20.0, 1600, true)]   // Высокий CO2
+        [InlineData(20.0, 1200, false)]  // Нормальные условия
+        public void ShouldVentilate_ReturnsCorrectValue(double temperature, double co2, bool expected)
         {
             // Arrange
             var data = new SensorData
             {
                 Temperature = temperature,
-                CO2Level = co2,
-                IsRaining = raining
+                CO2Level = co2
             };
 
             // Act
@@ -77,8 +76,7 @@ namespace SmartGreenhouse.Tests.Services
             // Arrange
             var data = new SensorData
             {
-                Temperature = 29.0,
-                IsRaining = false
+                Temperature = 29.0
             };
 
             // Act

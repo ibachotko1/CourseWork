@@ -13,23 +13,17 @@ namespace SmartGreenhouse.Core.BooleanLogic
         // ЛР4: Булевы функции для принятия решений
         public static bool ShouldTurnOnWater(SensorData data, ActuatorStatus actuators)
         {
-            // Формула: (Почва сухая И нет дождя) ИЛИ (Утро И низкая влажность)
-            return (data.SoilMoisture < 30.0 && !data.IsRaining) ||
-                   (IsMorning(data.Timestamp) && data.SoilMoisture < 50.0);
+            return data.SoilMoisture < 60.0;
         }
 
         public static bool ShouldTurnOnHeating(SensorData data)
         {
-            // Формула: Температура низкая И не день И не включена вентиляция
-            return data.Temperature < 15.0 && !IsDayTime(data.Timestamp) && data.CO2Level < 2000;
+            return data.Temperature < 15.0;
         }
 
         public static bool ShouldTurnOnVentilation(SensorData data, ActuatorStatus actuators)
         {
-            // ЛР4: Сложная булева функция
-            // (Высокая температура ИЛИ высокий CO2) И не идет дождь
-            return (data.Temperature > 25.0 || data.CO2Level > 1500) &&
-                   !data.IsRaining;
+            return data.Temperature > 25.0 || data.CO2Level > 1200;
         }
 
         // ЛР4: Вспомогательные методы для таблиц истинности
