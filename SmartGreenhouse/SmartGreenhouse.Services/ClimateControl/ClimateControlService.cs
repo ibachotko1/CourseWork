@@ -69,19 +69,19 @@ namespace SmartGreenhouse.Services.ClimateControl
         }
 
         // ЛР4: Булевы функции для принятия решений
-        private bool ShouldHeat(SensorData data)
+        public bool ShouldHeat(SensorData data)
         {
             // Формула: (Низкая температура И ночь) ИЛИ (Очень низкая температура)
             return (data.Temperature < 15.0 && IsNightTime()) || data.Temperature < 5.0;
         }
 
-        private bool ShouldVentilate(SensorData data)
+        public bool ShouldVentilate(SensorData data)
         {
             // Формула: (Высокая температура ИЛИ высокий CO2) И не идет дождь
             return (data.Temperature > 28.0 || data.CO2Level > 1500) && !data.IsRaining;
         }
 
-        private bool ShouldEnrichCO2(SensorData data)
+        public bool ShouldEnrichCO2(SensorData data)
         {
             // Формула: Низкий CO2 И день И высокая освещенность
             return data.CO2Level < 800 && IsDayTime() && data.LightIntensity > 10000;
@@ -162,7 +162,7 @@ namespace SmartGreenhouse.Services.ClimateControl
         public override bool CheckPreConditions(SensorData data, ActuatorStatus actuators)
         {
             return data.CO2Level < 800 &&
-                   IsDayTime() &&
+                   IsDayTime(data.Timestamp) && // Используем время из данных
                    data.LightIntensity > 5000;
         }
 
@@ -174,9 +174,9 @@ namespace SmartGreenhouse.Services.ClimateControl
 
         public override bool CheckPostConditions(SensorData data, ActuatorStatus actuators)
         {
-            return true; // В симуляции всегда успешно
+            return true;
         }
 
-        private bool IsDayTime() => DateTime.Now.Hour >= 6 && DateTime.Now.Hour < 18;
+        private bool IsDayTime(DateTime timestamp) => timestamp.Hour >= 6 && timestamp.Hour < 18;
     }
 }

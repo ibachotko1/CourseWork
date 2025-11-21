@@ -1,4 +1,5 @@
 ﻿using SmartGreenhouse.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -14,13 +15,13 @@ namespace SmartGreenhouse.Core.BooleanLogic
         {
             // Формула: (Почва сухая И нет дождя) ИЛИ (Утро И низкая влажность)
             return (data.SoilMoisture < 30.0 && !data.IsRaining) ||
-                   (IsMorning() && data.SoilMoisture < 50.0);
+                   (IsMorning(data.Timestamp) && data.SoilMoisture < 50.0);
         }
 
         public static bool ShouldTurnOnHeating(SensorData data)
         {
             // Формула: Температура низкая И не день И не включена вентиляция
-            return data.Temperature < 15.0 && !IsDayTime() && data.CO2Level < 2000;
+            return data.Temperature < 15.0 && !IsDayTime(data.Timestamp) && data.CO2Level < 2000;
         }
 
         public static bool ShouldTurnOnVentilation(SensorData data, ActuatorStatus actuators)
@@ -65,7 +66,7 @@ namespace SmartGreenhouse.Core.BooleanLogic
             return string.Join(" ∨ ", terms);
         }
 
-        private static bool IsMorning() => true; // Заглушка
-        private static bool IsDayTime() => true; // Заглушка
+        private static bool IsMorning(DateTime timestamp) => timestamp.Hour >= 6 && timestamp.Hour < 10;
+        private static bool IsDayTime(DateTime timestamp) => timestamp.Hour >= 6 && timestamp.Hour < 18;
     }
 }

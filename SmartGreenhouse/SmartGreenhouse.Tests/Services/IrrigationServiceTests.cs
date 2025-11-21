@@ -59,7 +59,7 @@ namespace SmartGreenhouse.Services.Irrigation
         }
 
         // ЛР4: Сложная булева функция для полива
-        private bool ShouldIrrigate(SensorData data)
+        internal bool ShouldIrrigate(SensorData data) // Изменено с private на internal
         {
             // Формула: (Низкая влажность почвы И нет дождя) ИЛИ 
             //          (Утро И средняя влажность И нет дождя) ИЛИ
@@ -171,18 +171,18 @@ namespace SmartGreenhouse.Services.Irrigation
             Console.WriteLine($"Irrigation cycle completed. Processed {processedCount} zones.");
         }
 
-        public bool CheckInvariant(List<IrrigationZone> zones, int currentIndex)
+        private bool CheckInvariant(List<IrrigationZone> zones, int currentIndex)
         {
             // Инвариант: для всех j < currentIndex, зона либо полита, либо пропущена по причине
             return true; // Упрощенная проверка
         }
 
-        public bool ShouldIrrigateZone(IrrigationZone zone, SensorData data)
+        private bool ShouldIrrigateZone(IrrigationZone zone, SensorData data)
         {
             return zone.SoilMoisture < data.SoilMoisture + 10.0; // Логика принятия решения
         }
 
-        public void IrrigateZone(IrrigationZone zone)
+        private void IrrigateZone(IrrigationZone zone)
         {
             Console.WriteLine($"Irrigating zone: {zone.Name}");
             zone.SoilMoisture += 15.0; // Увеличиваем влажность

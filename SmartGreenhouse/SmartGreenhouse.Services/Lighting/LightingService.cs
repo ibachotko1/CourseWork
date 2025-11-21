@@ -57,14 +57,19 @@ namespace SmartGreenhouse.Services.Lighting
         }
 
         // ЛР4: Булевы функции для освещения
-        private bool ShouldTurnOnLights(SensorData data)
+        public bool ShouldTurnOnLights(SensorData data)
         {
+            // Используем время из данных, а не системное время
+            bool isNight = IsNightTime(data.Timestamp);
+            bool isDay = !isNight;
+            bool isCloudy = IsCloudy(data);
+
             // Формула: (Низкая естественная освещенность И (ночь ИЛИ пасмурно)) ИЛИ
             //          (Рассада требует досветки) ИЛИ
             //          (По расписанию И не день)
-            return (data.LightIntensity < 1000 && (IsNightTime() || IsCloudy(data))) ||
-                   (NeedsSeedlingLight() && IsNightTime()) ||
-                   (_schedule.ShouldBeOn() && !IsDayTime());
+            return (data.LightIntensity < 1000 && (isNight || isCloudy)) ||
+                   (NeedsSeedlingLight() && isNight) ||
+                   (_schedule.ShouldBeOn(data.Timestamp) && !isDay);
         }
 
         public void SetLightingSchedule(TimeSpan start, TimeSpan end, double intensity)
@@ -106,8 +111,8 @@ namespace SmartGreenhouse.Services.Lighting
             }
         }
 
-        private bool IsNightTime() => DateTime.Now.Hour < 6 || DateTime.Now.Hour >= 18;
-        private bool IsDayTime() => !IsNightTime();
+        private bool IsNightTime(DateTime timestamp) => timestamp.Hour < 6 || timestamp.Hour >= 18;
+        private bool IsDayTime(DateTime timestamp) => !IsNightTime(timestamp);
         private bool IsCloudy(SensorData data) => data.LightIntensity < 5000;
         private bool NeedsSeedlingLight() => true; // Заглушка - в реальности проверка фазы роста
     }
@@ -183,9 +188,9 @@ namespace SmartGreenhouse.Services.Lighting
         public TimeSpan EndTime { get; set; } = new TimeSpan(6, 0, 0);   // 06:00
         public double Intensity { get; set; } = 0.8;
 
-        public bool ShouldBeOn()
+        public bool ShouldBeOn(DateTime currentTime)
         {
-            var now = DateTime.Now.TimeOfDay;
+            var now = currentTime.TimeOfDay;
             return now >= StartTime || now <= EndTime;
         }
     }

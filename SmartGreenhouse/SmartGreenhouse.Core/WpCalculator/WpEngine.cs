@@ -38,7 +38,7 @@ namespace SmartGreenhouse.Core.WpCalculator
             return $"({condition} && {wpThen}) || (!{condition} && {wpElse})";
         }
 
-        private static string WpStatement(string statement, string postCondition)
+        public static string WpStatement(string statement, string postCondition)
         {
             if (statement.Contains(":="))
             {
