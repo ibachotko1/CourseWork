@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClimateControl\ClimateControlService.cs" />
+    <Compile Include="GreenhouseOrchestrator.cs" />
     <Compile Include="Irrigation\IrrigationService.cs" />
     <Compile Include="Lighting\LightingService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
