@@ -1,82 +1,97 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\",
+  "WorkspaceRootPath": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|c:\\users\\miron\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\coursework\\smartgreenhouse\\smartgreenhouse.tests\\services\\irrigationservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|solutionrelative:smartgreenhouse.tests\\services\\irrigationservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Honor\\AppData\\Local\\Temp\\.vsdbgsrc\\69ebae0e8eb4dfa5168f08892015408fb13fb87ab904c83f6b94d741e2c6670c\\PropertyPathWorker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27EF7D89-BD82-407A-8713-BBDD1D628BAB}|SmartGreenhouse.Services\\SmartGreenhouse.Services.csproj|c:\\users\\miron\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\coursework\\smartgreenhouse\\smartgreenhouse.services\\irrigation\\irrigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27EF7D89-BD82-407A-8713-BBDD1D628BAB}|SmartGreenhouse.Services\\SmartGreenhouse.Services.csproj|solutionrelative:smartgreenhouse.services\\irrigation\\irrigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D86DE9D-9B08-4324-A190-B16073D3F5D2}|SmartGreenhouse.App\\SmartGreenhouse.App.csproj|d:\\desktop\\\u0430\u0440\u0438\u043D\u0430\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\smartgreenhouse\\smartgreenhouse.app\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7D86DE9D-9B08-4324-A190-B16073D3F5D2}|SmartGreenhouse.App\\SmartGreenhouse.App.csproj|solutionrelative:smartgreenhouse.app\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|c:\\users\\miron\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\coursework\\smartgreenhouse\\smartgreenhouse.tests\\services\\lightingservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|solutionrelative:smartgreenhouse.tests\\services\\lightingservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D86DE9D-9B08-4324-A190-B16073D3F5D2}|SmartGreenhouse.App\\SmartGreenhouse.App.csproj|D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\smartgreenhouse.app\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D86DE9D-9B08-4324-A190-B16073D3F5D2}|SmartGreenhouse.App\\SmartGreenhouse.App.csproj|solutionrelative:smartgreenhouse.app\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27EF7D89-BD82-407A-8713-BBDD1D628BAB}|SmartGreenhouse.Services\\SmartGreenhouse.Services.csproj|c:\\users\\miron\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\coursework\\smartgreenhouse\\smartgreenhouse.services\\lighting\\lightingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27EF7D89-BD82-407A-8713-BBDD1D628BAB}|SmartGreenhouse.Services\\SmartGreenhouse.Services.csproj|solutionrelative:smartgreenhouse.services\\lighting\\lightingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D86DE9D-9B08-4324-A190-B16073D3F5D2}|SmartGreenhouse.App\\SmartGreenhouse.App.csproj|d:\\desktop\\\u0430\u0440\u0438\u043D\u0430\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\smartgreenhouse\\smartgreenhouse.app\\booltocolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D86DE9D-9B08-4324-A190-B16073D3F5D2}|SmartGreenhouse.App\\SmartGreenhouse.App.csproj|solutionrelative:smartgreenhouse.app\\booltocolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|c:\\users\\miron\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\coursework\\smartgreenhouse\\smartgreenhouse.tests\\services\\sensordataservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|solutionrelative:smartgreenhouse.tests\\services\\sensordataservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D86DE9D-9B08-4324-A190-B16073D3F5D2}|SmartGreenhouse.App\\SmartGreenhouse.App.csproj|d:\\desktop\\\u0430\u0440\u0438\u043D\u0430\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\smartgreenhouse\\smartgreenhouse.app\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D86DE9D-9B08-4324-A190-B16073D3F5D2}|SmartGreenhouse.App\\SmartGreenhouse.App.csproj|solutionrelative:smartgreenhouse.app\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE078A10-1466-4DC0-9527-029954F302B6}|SmartGreenhouse.Core\\SmartGreenhouse.Core.csproj|c:\\users\\miron\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\coursework\\smartgreenhouse\\smartgreenhouse.core\\invariants\\climatecontrolloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE078A10-1466-4DC0-9527-029954F302B6}|SmartGreenhouse.Core\\SmartGreenhouse.Core.csproj|solutionrelative:smartgreenhouse.core\\invariants\\climatecontrolloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE078A10-1466-4DC0-9527-029954F302B6}|SmartGreenhouse.Core\\SmartGreenhouse.Core.csproj|c:\\users\\miron\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\coursework\\smartgreenhouse\\smartgreenhouse.core\\booleanlogic\\sensorlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE078A10-1466-4DC0-9527-029954F302B6}|SmartGreenhouse.Core\\SmartGreenhouse.Core.csproj|solutionrelative:smartgreenhouse.core\\booleanlogic\\sensorlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27EF7D89-BD82-407A-8713-BBDD1D628BAB}|SmartGreenhouse.Services\\SmartGreenhouse.Services.csproj|c:\\users\\miron\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\coursework\\smartgreenhouse\\smartgreenhouse.services\\climatecontrol\\climatecontrolservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27EF7D89-BD82-407A-8713-BBDD1D628BAB}|SmartGreenhouse.Services\\SmartGreenhouse.Services.csproj|solutionrelative:smartgreenhouse.services\\climatecontrol\\climatecontrolservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|c:\\users\\miron\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\coursework\\smartgreenhouse\\smartgreenhouse.tests\\core\\wpenginetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|solutionrelative:smartgreenhouse.tests\\core\\wpenginetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|c:\\users\\miron\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\coursework\\smartgreenhouse\\smartgreenhouse.tests\\core\\greenhouseoperationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|solutionrelative:smartgreenhouse.tests\\core\\greenhouseoperationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27EF7D89-BD82-407A-8713-BBDD1D628BAB}|SmartGreenhouse.Services\\SmartGreenhouse.Services.csproj|c:\\users\\miron\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\coursework\\smartgreenhouse\\smartgreenhouse.services\\sensordataservices\\sensordataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27EF7D89-BD82-407A-8713-BBDD1D628BAB}|SmartGreenhouse.Services\\SmartGreenhouse.Services.csproj|solutionrelative:smartgreenhouse.services\\sensordataservices\\sensordataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|c:\\users\\miron\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\coursework\\smartgreenhouse\\smartgreenhouse.tests\\core\\booleanlogictests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|solutionrelative:smartgreenhouse.tests\\core\\booleanlogictests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|c:\\users\\miron\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\coursework\\smartgreenhouse\\smartgreenhouse.tests\\core\\climatecontrollooptests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|solutionrelative:smartgreenhouse.tests\\core\\climatecontrollooptests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE078A10-1466-4DC0-9527-029954F302B6}|SmartGreenhouse.Core\\SmartGreenhouse.Core.csproj|c:\\users\\miron\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\coursework\\smartgreenhouse\\smartgreenhouse.core\\wpcalculator\\wpengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE078A10-1466-4DC0-9527-029954F302B6}|SmartGreenhouse.Core\\SmartGreenhouse.Core.csproj|solutionrelative:smartgreenhouse.core\\wpcalculator\\wpengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|c:\\users\\miron\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\coursework\\smartgreenhouse\\smartgreenhouse.tests\\core\\modelstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|solutionrelative:smartgreenhouse.tests\\core\\modelstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|c:\\users\\miron\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\coursework\\smartgreenhouse\\smartgreenhouse.tests\\smartgreenhouse.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|solutionrelative:smartgreenhouse.tests\\smartgreenhouse.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|c:\\users\\miron\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\coursework\\smartgreenhouse\\smartgreenhouse.tests\\services\\climatecontrolservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|solutionrelative:smartgreenhouse.tests\\services\\climatecontrolservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D86DE9D-9B08-4324-A190-B16073D3F5D2}|SmartGreenhouse.App\\SmartGreenhouse.App.csproj|c:\\users\\miron\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\coursework\\smartgreenhouse\\smartgreenhouse.app\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{7D86DE9D-9B08-4324-A190-B16073D3F5D2}|SmartGreenhouse.App\\SmartGreenhouse.App.csproj|D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\smartgreenhouse.app\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{7D86DE9D-9B08-4324-A190-B16073D3F5D2}|SmartGreenhouse.App\\SmartGreenhouse.App.csproj|solutionrelative:smartgreenhouse.app\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D86DE9D-9B08-4324-A190-B16073D3F5D2}|SmartGreenhouse.App\\SmartGreenhouse.App.csproj|C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\smartgreenhouse.app\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D86DE9D-9B08-4324-A190-B16073D3F5D2}|SmartGreenhouse.App\\SmartGreenhouse.App.csproj|solutionrelative:smartgreenhouse.app\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|d:\\desktop\\\u0430\u0440\u0438\u043D\u0430\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\smartgreenhouse\\smartgreenhouse.tests\\services\\irrigationservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|solutionrelative:smartgreenhouse.tests\\services\\irrigationservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27EF7D89-BD82-407A-8713-BBDD1D628BAB}|SmartGreenhouse.Services\\SmartGreenhouse.Services.csproj|D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\smartgreenhouse.services\\irrigation\\irrigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27EF7D89-BD82-407A-8713-BBDD1D628BAB}|SmartGreenhouse.Services\\SmartGreenhouse.Services.csproj|solutionrelative:smartgreenhouse.services\\irrigation\\irrigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|d:\\desktop\\\u0430\u0440\u0438\u043D\u0430\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\smartgreenhouse\\smartgreenhouse.tests\\services\\lightingservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|solutionrelative:smartgreenhouse.tests\\services\\lightingservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27EF7D89-BD82-407A-8713-BBDD1D628BAB}|SmartGreenhouse.Services\\SmartGreenhouse.Services.csproj|D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\smartgreenhouse.services\\lighting\\lightingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27EF7D89-BD82-407A-8713-BBDD1D628BAB}|SmartGreenhouse.Services\\SmartGreenhouse.Services.csproj|solutionrelative:smartgreenhouse.services\\lighting\\lightingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|d:\\desktop\\\u0430\u0440\u0438\u043D\u0430\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\smartgreenhouse\\smartgreenhouse.tests\\services\\sensordataservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|solutionrelative:smartgreenhouse.tests\\services\\sensordataservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE078A10-1466-4DC0-9527-029954F302B6}|SmartGreenhouse.Core\\SmartGreenhouse.Core.csproj|D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\smartgreenhouse.core\\invariants\\climatecontrolloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE078A10-1466-4DC0-9527-029954F302B6}|SmartGreenhouse.Core\\SmartGreenhouse.Core.csproj|solutionrelative:smartgreenhouse.core\\invariants\\climatecontrolloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE078A10-1466-4DC0-9527-029954F302B6}|SmartGreenhouse.Core\\SmartGreenhouse.Core.csproj|D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\smartgreenhouse.core\\booleanlogic\\sensorlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE078A10-1466-4DC0-9527-029954F302B6}|SmartGreenhouse.Core\\SmartGreenhouse.Core.csproj|solutionrelative:smartgreenhouse.core\\booleanlogic\\sensorlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27EF7D89-BD82-407A-8713-BBDD1D628BAB}|SmartGreenhouse.Services\\SmartGreenhouse.Services.csproj|D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\smartgreenhouse.services\\climatecontrol\\climatecontrolservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27EF7D89-BD82-407A-8713-BBDD1D628BAB}|SmartGreenhouse.Services\\SmartGreenhouse.Services.csproj|solutionrelative:smartgreenhouse.services\\climatecontrol\\climatecontrolservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|d:\\desktop\\\u0430\u0440\u0438\u043D\u0430\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\smartgreenhouse\\smartgreenhouse.tests\\core\\wpenginetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|solutionrelative:smartgreenhouse.tests\\core\\wpenginetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|d:\\desktop\\\u0430\u0440\u0438\u043D\u0430\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\smartgreenhouse\\smartgreenhouse.tests\\core\\greenhouseoperationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|solutionrelative:smartgreenhouse.tests\\core\\greenhouseoperationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27EF7D89-BD82-407A-8713-BBDD1D628BAB}|SmartGreenhouse.Services\\SmartGreenhouse.Services.csproj|D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\smartgreenhouse.services\\sensordataservices\\sensordataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27EF7D89-BD82-407A-8713-BBDD1D628BAB}|SmartGreenhouse.Services\\SmartGreenhouse.Services.csproj|solutionrelative:smartgreenhouse.services\\sensordataservices\\sensordataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|d:\\desktop\\\u0430\u0440\u0438\u043D\u0430\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\smartgreenhouse\\smartgreenhouse.tests\\core\\booleanlogictests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|solutionrelative:smartgreenhouse.tests\\core\\booleanlogictests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|d:\\desktop\\\u0430\u0440\u0438\u043D\u0430\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\smartgreenhouse\\smartgreenhouse.tests\\core\\climatecontrollooptests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|solutionrelative:smartgreenhouse.tests\\core\\climatecontrollooptests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE078A10-1466-4DC0-9527-029954F302B6}|SmartGreenhouse.Core\\SmartGreenhouse.Core.csproj|D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\smartgreenhouse.core\\wpcalculator\\wpengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE078A10-1466-4DC0-9527-029954F302B6}|SmartGreenhouse.Core\\SmartGreenhouse.Core.csproj|solutionrelative:smartgreenhouse.core\\wpcalculator\\wpengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|d:\\desktop\\\u0430\u0440\u0438\u043D\u0430\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\smartgreenhouse\\smartgreenhouse.tests\\core\\modelstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|solutionrelative:smartgreenhouse.tests\\core\\modelstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|d:\\desktop\\\u0430\u0440\u0438\u043D\u0430\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\smartgreenhouse\\smartgreenhouse.tests\\smartgreenhouse.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|solutionrelative:smartgreenhouse.tests\\smartgreenhouse.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|d:\\desktop\\\u0430\u0440\u0438\u043D\u0430\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\smartgreenhouse\\smartgreenhouse.tests\\services\\climatecontrolservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|solutionrelative:smartgreenhouse.tests\\services\\climatecontrolservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dmitriy\\source\\repos\\SmartGreenhouse\\SmartGreenhouse.Services\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -92,244 +107,119 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 8,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PropertyPathWorker.cs",
+              "DocumentMoniker": "C:\\Users\\Honor\\AppData\\Local\\Temp\\.vsdbgsrc\\69ebae0e8eb4dfa5168f08892015408fb13fb87ab904c83f6b94d741e2c6670c\\PropertyPathWorker.cs",
+              "ToolTip": "C:\\Users\\Honor\\AppData\\Local\\Temp\\.vsdbgsrc\\69ebae0e8eb4dfa5168f08892015408fb13fb87ab904c83f6b94d741e2c6670c\\PropertyPathWorker.cs [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]",
+              "ViewState": "AgIAAJwEAAAAAAAAAAAwwKsEAAARAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T18:13:48.546Z",
+              "EditorCaption": " [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.App\\App.xaml",
+              "RelativeDocumentMoniker": "SmartGreenhouse.App\\App.xaml",
+              "ToolTip": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.App\\App.xaml",
+              "RelativeToolTip": "SmartGreenhouse.App\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-21T17:56:24.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "IrrigationServiceTests.cs",
-              "DocumentMoniker": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Tests\\Services\\IrrigationServiceTests.cs",
+              "DocumentMoniker": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Tests\\Services\\IrrigationServiceTests.cs",
               "RelativeDocumentMoniker": "SmartGreenhouse.Tests\\Services\\IrrigationServiceTests.cs",
-              "ToolTip": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Tests\\Services\\IrrigationServiceTests.cs*",
-              "RelativeToolTip": "SmartGreenhouse.Tests\\Services\\IrrigationServiceTests.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ToolTip": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Tests\\Services\\IrrigationServiceTests.cs",
+              "RelativeToolTip": "SmartGreenhouse.Tests\\Services\\IrrigationServiceTests.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-21T16:34:55.4Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IrrigationService.cs",
-              "DocumentMoniker": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Services\\Irrigation\\IrrigationService.cs",
-              "RelativeDocumentMoniker": "SmartGreenhouse.Services\\Irrigation\\IrrigationService.cs",
-              "ToolTip": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Services\\Irrigation\\IrrigationService.cs*",
-              "RelativeToolTip": "SmartGreenhouse.Services\\Irrigation\\IrrigationService.cs*",
-              "ViewState": "AgIAAJoAAAAAAAAAAAAvwK0AAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T16:35:18.471Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LightingServiceTests.cs",
-              "DocumentMoniker": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Tests\\Services\\LightingServiceTests.cs",
-              "RelativeDocumentMoniker": "SmartGreenhouse.Tests\\Services\\LightingServiceTests.cs",
-              "ToolTip": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Tests\\Services\\LightingServiceTests.cs",
-              "RelativeToolTip": "SmartGreenhouse.Tests\\Services\\LightingServiceTests.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAmwCAAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T16:35:59.11Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LightingService.cs",
-              "DocumentMoniker": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Services\\Lighting\\LightingService.cs",
-              "RelativeDocumentMoniker": "SmartGreenhouse.Services\\Lighting\\LightingService.cs",
-              "ToolTip": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Services\\Lighting\\LightingService.cs",
-              "RelativeToolTip": "SmartGreenhouse.Services\\Lighting\\LightingService.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAowDsAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T16:36:27.499Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "SensorDataServiceTests.cs",
-              "DocumentMoniker": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Tests\\Services\\SensorDataServiceTests.cs",
+              "DocumentMoniker": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Tests\\Services\\SensorDataServiceTests.cs",
               "RelativeDocumentMoniker": "SmartGreenhouse.Tests\\Services\\SensorDataServiceTests.cs",
-              "ToolTip": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Tests\\Services\\SensorDataServiceTests.cs",
+              "ToolTip": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Tests\\Services\\SensorDataServiceTests.cs",
               "RelativeToolTip": "SmartGreenhouse.Tests\\Services\\SensorDataServiceTests.cs",
               "ViewState": "AgIAAH8AAAAAAAAAAAAswKcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T16:42:01.951Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ClimateControlLoop.cs",
-              "DocumentMoniker": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Core\\Invariants\\ClimateControlLoop.cs",
-              "RelativeDocumentMoniker": "SmartGreenhouse.Core\\Invariants\\ClimateControlLoop.cs",
-              "ToolTip": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Core\\Invariants\\ClimateControlLoop.cs",
-              "RelativeToolTip": "SmartGreenhouse.Core\\Invariants\\ClimateControlLoop.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAUwIEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T16:43:28.175Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SensorLogic.cs",
-              "DocumentMoniker": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Core\\BooleanLogic\\SensorLogic.cs",
-              "RelativeDocumentMoniker": "SmartGreenhouse.Core\\BooleanLogic\\SensorLogic.cs",
-              "ToolTip": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Core\\BooleanLogic\\SensorLogic.cs",
-              "RelativeToolTip": "SmartGreenhouse.Core\\BooleanLogic\\SensorLogic.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAiwEcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T17:08:58.2Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ClimateControlService.cs",
-              "DocumentMoniker": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Services\\ClimateControl\\ClimateControlService.cs",
-              "RelativeDocumentMoniker": "SmartGreenhouse.Services\\ClimateControl\\ClimateControlService.cs",
-              "ToolTip": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Services\\ClimateControl\\ClimateControlService.cs",
-              "RelativeToolTip": "SmartGreenhouse.Services\\ClimateControl\\ClimateControlService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALQAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T16:34:02.735Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "WpEngineTests.cs",
-              "DocumentMoniker": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Tests\\Core\\WpEngineTests.cs",
-              "RelativeDocumentMoniker": "SmartGreenhouse.Tests\\Core\\WpEngineTests.cs",
-              "ToolTip": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Tests\\Core\\WpEngineTests.cs",
-              "RelativeToolTip": "SmartGreenhouse.Tests\\Core\\WpEngineTests.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAuwCYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T16:44:47.247Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "GreenhouseOperationTests.cs",
-              "DocumentMoniker": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Tests\\Core\\GreenhouseOperationTests.cs",
-              "RelativeDocumentMoniker": "SmartGreenhouse.Tests\\Core\\GreenhouseOperationTests.cs",
-              "ToolTip": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Tests\\Core\\GreenhouseOperationTests.cs",
-              "RelativeToolTip": "SmartGreenhouse.Tests\\Core\\GreenhouseOperationTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T16:42:35.377Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SensorDataService.cs",
-              "DocumentMoniker": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Services\\SensorDataServices\\SensorDataService.cs",
-              "RelativeDocumentMoniker": "SmartGreenhouse.Services\\SensorDataServices\\SensorDataService.cs",
-              "ToolTip": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Services\\SensorDataServices\\SensorDataService.cs",
-              "RelativeToolTip": "SmartGreenhouse.Services\\SensorDataServices\\SensorDataService.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T17:01:25.245Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "BooleanLogicTests.cs",
-              "DocumentMoniker": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Tests\\Core\\BooleanLogicTests.cs",
-              "RelativeDocumentMoniker": "SmartGreenhouse.Tests\\Core\\BooleanLogicTests.cs",
-              "ToolTip": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Tests\\Core\\BooleanLogicTests.cs",
-              "RelativeToolTip": "SmartGreenhouse.Tests\\Core\\BooleanLogicTests.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAswEEAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T16:41:38.31Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "WpEngine.cs",
-              "DocumentMoniker": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Core\\WpCalculator\\WpEngine.cs",
-              "RelativeDocumentMoniker": "SmartGreenhouse.Core\\WpCalculator\\WpEngine.cs",
-              "ToolTip": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Core\\WpCalculator\\WpEngine.cs",
-              "RelativeToolTip": "SmartGreenhouse.Core\\WpCalculator\\WpEngine.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAA9wCgAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T16:45:04.336Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ClimateControlLoopTests.cs",
-              "DocumentMoniker": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Tests\\Core\\ClimateControlLoopTests.cs",
-              "RelativeDocumentMoniker": "SmartGreenhouse.Tests\\Core\\ClimateControlLoopTests.cs",
-              "ToolTip": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Tests\\Core\\ClimateControlLoopTests.cs",
-              "RelativeToolTip": "SmartGreenhouse.Tests\\Core\\ClimateControlLoopTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIEAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T16:42:58.902Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T16:42:01.951Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "ModelsTests.cs",
-              "DocumentMoniker": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Tests\\Core\\ModelsTests.cs",
-              "RelativeDocumentMoniker": "SmartGreenhouse.Tests\\Core\\ModelsTests.cs",
-              "ToolTip": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Tests\\Core\\ModelsTests.cs",
-              "RelativeToolTip": "SmartGreenhouse.Tests\\Core\\ModelsTests.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAA7wFMAAAAFAAAAAAAAAA==",
+              "Title": "WpEngineTests.cs",
+              "DocumentMoniker": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Tests\\Core\\WpEngineTests.cs",
+              "RelativeDocumentMoniker": "SmartGreenhouse.Tests\\Core\\WpEngineTests.cs",
+              "ToolTip": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Tests\\Core\\WpEngineTests.cs",
+              "RelativeToolTip": "SmartGreenhouse.Tests\\Core\\WpEngineTests.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAuwCYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T16:44:24.98Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T16:44:47.247Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ClimateControlServiceTests.cs",
-              "DocumentMoniker": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Tests\\Services\\ClimateControlServiceTests.cs",
-              "RelativeDocumentMoniker": "SmartGreenhouse.Tests\\Services\\ClimateControlServiceTests.cs",
-              "ToolTip": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Tests\\Services\\ClimateControlServiceTests.cs",
-              "RelativeToolTip": "SmartGreenhouse.Tests\\Services\\ClimateControlServiceTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "ClimateControlLoop.cs",
+              "DocumentMoniker": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Core\\Invariants\\ClimateControlLoop.cs",
+              "RelativeDocumentMoniker": "SmartGreenhouse.Core\\Invariants\\ClimateControlLoop.cs",
+              "ToolTip": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Core\\Invariants\\ClimateControlLoop.cs",
+              "RelativeToolTip": "SmartGreenhouse.Core\\Invariants\\ClimateControlLoop.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAUwIEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T16:32:06.657Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T16:43:28.175Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "SmartGreenhouse.Tests",
-              "DocumentMoniker": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj",
-              "RelativeDocumentMoniker": "SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj",
-              "ToolTip": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj",
-              "RelativeToolTip": "SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-21T16:32:32.924Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.App\\MainWindow.xaml",
+              "DocumentMoniker": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.App\\MainWindow.xaml",
               "RelativeDocumentMoniker": "SmartGreenhouse.App\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.App\\MainWindow.xaml",
+              "ToolTip": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.App\\MainWindow.xaml",
               "RelativeToolTip": "SmartGreenhouse.App\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-11-21T11:02:26.84Z",
@@ -337,39 +227,248 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.App\\MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.App\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "SmartGreenhouse.App\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.App\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.App\\MainWindow.xaml.cs",
               "RelativeToolTip": "SmartGreenhouse.App\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T11:02:26.476Z"
+              "WhenOpened": "2025-11-21T11:02:26.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.App\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "SmartGreenhouse.App\\MainViewModel.cs",
+              "ToolTip": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.App\\MainViewModel.cs",
+              "RelativeToolTip": "SmartGreenhouse.App\\MainViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T17:57:27.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BoolToColorConverter.cs",
+              "DocumentMoniker": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.App\\BoolToColorConverter.cs",
+              "RelativeDocumentMoniker": "SmartGreenhouse.App\\BoolToColorConverter.cs",
+              "ToolTip": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.App\\BoolToColorConverter.cs",
+              "RelativeToolTip": "SmartGreenhouse.App\\BoolToColorConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T18:10:12.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LightingServiceTests.cs",
+              "DocumentMoniker": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Tests\\Services\\LightingServiceTests.cs",
+              "RelativeDocumentMoniker": "SmartGreenhouse.Tests\\Services\\LightingServiceTests.cs",
+              "ToolTip": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Tests\\Services\\LightingServiceTests.cs",
+              "RelativeToolTip": "SmartGreenhouse.Tests\\Services\\LightingServiceTests.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAmwCAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T16:35:59.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "SensorDataService.cs",
+              "DocumentMoniker": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Services\\SensorDataServices\\SensorDataService.cs",
+              "RelativeDocumentMoniker": "SmartGreenhouse.Services\\SensorDataServices\\SensorDataService.cs",
+              "ToolTip": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Services\\SensorDataServices\\SensorDataService.cs",
+              "RelativeToolTip": "SmartGreenhouse.Services\\SensorDataServices\\SensorDataService.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T17:01:25.245Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
+              "Title": "WpEngine.cs",
+              "DocumentMoniker": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Core\\WpCalculator\\WpEngine.cs",
+              "RelativeDocumentMoniker": "SmartGreenhouse.Core\\WpCalculator\\WpEngine.cs",
+              "ToolTip": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Core\\WpCalculator\\WpEngine.cs",
+              "RelativeToolTip": "SmartGreenhouse.Core\\WpCalculator\\WpEngine.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAA9wCgAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T16:45:04.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SensorLogic.cs",
+              "DocumentMoniker": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Core\\BooleanLogic\\SensorLogic.cs",
+              "RelativeDocumentMoniker": "SmartGreenhouse.Core\\BooleanLogic\\SensorLogic.cs",
+              "ToolTip": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Core\\BooleanLogic\\SensorLogic.cs",
+              "RelativeToolTip": "SmartGreenhouse.Core\\BooleanLogic\\SensorLogic.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAiwEcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T17:08:58.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ClimateControlService.cs",
+              "DocumentMoniker": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Services\\ClimateControl\\ClimateControlService.cs",
+              "RelativeDocumentMoniker": "SmartGreenhouse.Services\\ClimateControl\\ClimateControlService.cs",
+              "ToolTip": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Services\\ClimateControl\\ClimateControlService.cs",
+              "RelativeToolTip": "SmartGreenhouse.Services\\ClimateControl\\ClimateControlService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T16:34:02.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GreenhouseOperationTests.cs",
+              "DocumentMoniker": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Tests\\Core\\GreenhouseOperationTests.cs",
+              "RelativeDocumentMoniker": "SmartGreenhouse.Tests\\Core\\GreenhouseOperationTests.cs",
+              "ToolTip": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Tests\\Core\\GreenhouseOperationTests.cs",
+              "RelativeToolTip": "SmartGreenhouse.Tests\\Core\\GreenhouseOperationTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T16:42:35.377Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "BooleanLogicTests.cs",
+              "DocumentMoniker": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Tests\\Core\\BooleanLogicTests.cs",
+              "RelativeDocumentMoniker": "SmartGreenhouse.Tests\\Core\\BooleanLogicTests.cs",
+              "ToolTip": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Tests\\Core\\BooleanLogicTests.cs",
+              "RelativeToolTip": "SmartGreenhouse.Tests\\Core\\BooleanLogicTests.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAswEEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T16:41:38.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ClimateControlLoopTests.cs",
+              "DocumentMoniker": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Tests\\Core\\ClimateControlLoopTests.cs",
+              "RelativeDocumentMoniker": "SmartGreenhouse.Tests\\Core\\ClimateControlLoopTests.cs",
+              "ToolTip": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Tests\\Core\\ClimateControlLoopTests.cs",
+              "RelativeToolTip": "SmartGreenhouse.Tests\\Core\\ClimateControlLoopTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T16:42:58.902Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ModelsTests.cs",
+              "DocumentMoniker": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Tests\\Core\\ModelsTests.cs",
+              "RelativeDocumentMoniker": "SmartGreenhouse.Tests\\Core\\ModelsTests.cs",
+              "ToolTip": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Tests\\Core\\ModelsTests.cs",
+              "RelativeToolTip": "SmartGreenhouse.Tests\\Core\\ModelsTests.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAA7wFMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T16:44:24.98Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ClimateControlServiceTests.cs",
+              "DocumentMoniker": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Tests\\Services\\ClimateControlServiceTests.cs",
+              "RelativeDocumentMoniker": "SmartGreenhouse.Tests\\Services\\ClimateControlServiceTests.cs",
+              "ToolTip": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Tests\\Services\\ClimateControlServiceTests.cs",
+              "RelativeToolTip": "SmartGreenhouse.Tests\\Services\\ClimateControlServiceTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T16:32:06.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "SmartGreenhouse.Tests.csproj",
+              "DocumentMoniker": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj",
+              "RelativeDocumentMoniker": "SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj",
+              "ToolTip": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj",
+              "RelativeToolTip": "SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-21T16:32:32.924Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\Dmitriy\\source\\repos\\SmartGreenhouse\\SmartGreenhouse.Services\\Class1.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Dmitriy\\source\\repos\\SmartGreenhouse\\SmartGreenhouse.Services\\Class1.cs",
               "ToolTip": "C:\\Users\\Dmitriy\\source\\repos\\SmartGreenhouse\\SmartGreenhouse.Services\\Class1.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Dmitriy\\source\\repos\\SmartGreenhouse\\SmartGreenhouse.Services\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-21T11:01:49.842Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\Dmitriy\\source\\repos\\SmartGreenhouse\\SmartGreenhouse.Core\\Class1.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Dmitriy\\source\\repos\\SmartGreenhouse\\SmartGreenhouse.Core\\Class1.cs",
               "ToolTip": "C:\\Users\\Dmitriy\\source\\repos\\SmartGreenhouse\\SmartGreenhouse.Core\\Class1.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Dmitriy\\source\\repos\\SmartGreenhouse\\SmartGreenhouse.Core\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-21T11:01:15.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IrrigationService.cs",
+              "DocumentMoniker": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Services\\Irrigation\\IrrigationService.cs",
+              "RelativeDocumentMoniker": "SmartGreenhouse.Services\\Irrigation\\IrrigationService.cs",
+              "ToolTip": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Services\\Irrigation\\IrrigationService.cs",
+              "RelativeToolTip": "SmartGreenhouse.Services\\Irrigation\\IrrigationService.cs",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAvwK0AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T16:35:18.471Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LightingService.cs",
+              "DocumentMoniker": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Services\\Lighting\\LightingService.cs",
+              "RelativeDocumentMoniker": "SmartGreenhouse.Services\\Lighting\\LightingService.cs",
+              "ToolTip": "D:\\Desktop\\\u0410\u0440\u0438\u043D\u0430\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\SmartGreenhouse\\SmartGreenhouse.Services\\Lighting\\LightingService.cs",
+              "RelativeToolTip": "SmartGreenhouse.Services\\Lighting\\LightingService.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAowDsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T16:36:27.499Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 193,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 204,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1062,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             }
           ]
         }

@@ -63,6 +63,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="BoolToColorConverter.cs" />
+    <Compile Include="MainViewModel.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -93,6 +95,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SmartGreenhouse.Core\SmartGreenhouse.Core.csproj">
+      <Project>{de078a10-1466-4dc0-9527-029954f302b6}</Project>
+      <Name>SmartGreenhouse.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmartGreenhouse.Services\SmartGreenhouse.Services.csproj">
+      <Project>{27ef7d89-bd82-407a-8713-bbdd1d628bab}</Project>
+      <Name>SmartGreenhouse.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
