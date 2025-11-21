@@ -1,0 +1,104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Dmitriy\\source\\repos\\SmartGreenhouse\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7D86DE9D-9B08-4324-A190-B16073D3F5D2}|SmartGreenhouse.App\\SmartGreenhouse.App.csproj|c:\\users\\dmitriy\\source\\repos\\smartgreenhouse\\smartgreenhouse.app\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7D86DE9D-9B08-4324-A190-B16073D3F5D2}|SmartGreenhouse.App\\SmartGreenhouse.App.csproj|solutionrelative:smartgreenhouse.app\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D86DE9D-9B08-4324-A190-B16073D3F5D2}|SmartGreenhouse.App\\SmartGreenhouse.App.csproj|c:\\users\\dmitriy\\source\\repos\\smartgreenhouse\\smartgreenhouse.app\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D86DE9D-9B08-4324-A190-B16073D3F5D2}|SmartGreenhouse.App\\SmartGreenhouse.App.csproj|solutionrelative:smartgreenhouse.app\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|c:\\users\\dmitriy\\source\\repos\\smartgreenhouse\\smartgreenhouse.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{670BB208-0D5C-405D-944E-016943D3F0D7}|SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj|solutionrelative:smartgreenhouse.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27EF7D89-BD82-407A-8713-BBDD1D628BAB}|SmartGreenhouse.Services\\SmartGreenhouse.Services.csproj|c:\\users\\dmitriy\\source\\repos\\smartgreenhouse\\smartgreenhouse.services\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27EF7D89-BD82-407A-8713-BBDD1D628BAB}|SmartGreenhouse.Services\\SmartGreenhouse.Services.csproj|solutionrelative:smartgreenhouse.services\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE078A10-1466-4DC0-9527-029954F302B6}|SmartGreenhouse.Core\\SmartGreenhouse.Core.csproj|c:\\users\\dmitriy\\source\\repos\\smartgreenhouse\\smartgreenhouse.core\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE078A10-1466-4DC0-9527-029954F302B6}|SmartGreenhouse.Core\\SmartGreenhouse.Core.csproj|solutionrelative:smartgreenhouse.core\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Dmitriy\\source\\repos\\SmartGreenhouse\\SmartGreenhouse.App\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "SmartGreenhouse.App\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Dmitriy\\source\\repos\\SmartGreenhouse\\SmartGreenhouse.App\\MainWindow.xaml",
+              "RelativeToolTip": "SmartGreenhouse.App\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-21T11:02:26.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Dmitriy\\source\\repos\\SmartGreenhouse\\SmartGreenhouse.App\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "SmartGreenhouse.App\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Dmitriy\\source\\repos\\SmartGreenhouse\\SmartGreenhouse.App\\MainWindow.xaml.cs",
+              "RelativeToolTip": "SmartGreenhouse.App\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T11:02:26.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\Dmitriy\\source\\repos\\SmartGreenhouse\\SmartGreenhouse.Tests\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "SmartGreenhouse.Tests\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\Dmitriy\\source\\repos\\SmartGreenhouse\\SmartGreenhouse.Tests\\UnitTest1.cs",
+              "RelativeToolTip": "SmartGreenhouse.Tests\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T11:02:13.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\Dmitriy\\source\\repos\\SmartGreenhouse\\SmartGreenhouse.Services\\Class1.cs",
+              "RelativeDocumentMoniker": "SmartGreenhouse.Services\\Class1.cs",
+              "ToolTip": "C:\\Users\\Dmitriy\\source\\repos\\SmartGreenhouse\\SmartGreenhouse.Services\\Class1.cs",
+              "RelativeToolTip": "SmartGreenhouse.Services\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T11:01:49.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\Dmitriy\\source\\repos\\SmartGreenhouse\\SmartGreenhouse.Core\\Class1.cs",
+              "RelativeDocumentMoniker": "SmartGreenhouse.Core\\Class1.cs",
+              "ToolTip": "C:\\Users\\Dmitriy\\source\\repos\\SmartGreenhouse\\SmartGreenhouse.Core\\Class1.cs",
+              "RelativeToolTip": "SmartGreenhouse.Core\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T11:01:15.375Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
