@@ -5514,11 +5514,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dmitriy\\source\\repos\\SmartGreenhouse\\SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\Dmitriy\\Documents\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj",
       "projectName": "SmartGreenhouse.Tests",
-      "projectPath": "C:\\Users\\Dmitriy\\source\\repos\\SmartGreenhouse\\SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj",
+      "projectPath": "C:\\Users\\Dmitriy\\Documents\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj",
       "packagesPath": "C:\\Users\\Dmitriy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dmitriy\\source\\repos\\SmartGreenhouse\\SmartGreenhouse.Tests\\obj\\",
+      "outputPath": "C:\\Users\\Dmitriy\\Documents\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

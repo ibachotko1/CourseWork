@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rcfSkr1t/UY=",
+  "dgSpecHash": "jiN8HDbR70g=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dmitriy\\source\\repos\\SmartGreenhouse\\SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj",
+  "projectFilePath": "C:\\Users\\Dmitriy\\Documents\\GitHub\\CourseWork\\SmartGreenhouse\\SmartGreenhouse.Tests\\SmartGreenhouse.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dmitriy\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\Dmitriy\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",
