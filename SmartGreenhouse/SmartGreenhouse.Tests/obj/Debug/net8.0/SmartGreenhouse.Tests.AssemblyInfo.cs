@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartGreenhouse.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c4fbbd2258e33cbe825757ba1b7db505fa892df")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02830cc64f08105d82a90b74d9a9b28172adc95a")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartGreenhouse.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartGreenhouse.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
