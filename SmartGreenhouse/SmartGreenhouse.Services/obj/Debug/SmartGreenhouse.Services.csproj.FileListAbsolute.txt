@@ -16,3 +16,12 @@ C:\Users\miron\OneDrive\Документы\GitHub\CourseWork\SmartGreenhouse\Sma
 C:\Users\miron\OneDrive\Документы\GitHub\CourseWork\SmartGreenhouse\SmartGreenhouse.Services\obj\Debug\SmartGre.CB588DDF.Up2Date
 C:\Users\miron\OneDrive\Документы\GitHub\CourseWork\SmartGreenhouse\SmartGreenhouse.Services\obj\Debug\SmartGreenhouse.Services.dll
 C:\Users\miron\OneDrive\Документы\GitHub\CourseWork\SmartGreenhouse\SmartGreenhouse.Services\obj\Debug\SmartGreenhouse.Services.pdb
+D:\Desktop\Арина\Курсовая\SmartGreenhouse\SmartGreenhouse.Services\bin\Debug\SmartGreenhouse.Services.dll
+D:\Desktop\Арина\Курсовая\SmartGreenhouse\SmartGreenhouse.Services\bin\Debug\SmartGreenhouse.Services.pdb
+D:\Desktop\Арина\Курсовая\SmartGreenhouse\SmartGreenhouse.Services\bin\Debug\SmartGreenhouse.Core.dll
+D:\Desktop\Арина\Курсовая\SmartGreenhouse\SmartGreenhouse.Services\bin\Debug\SmartGreenhouse.Core.pdb
+D:\Desktop\Арина\Курсовая\SmartGreenhouse\SmartGreenhouse.Services\obj\Debug\SmartGreenhouse.Services.csproj.AssemblyReference.cache
+D:\Desktop\Арина\Курсовая\SmartGreenhouse\SmartGreenhouse.Services\obj\Debug\SmartGreenhouse.Services.csproj.CoreCompileInputs.cache
+D:\Desktop\Арина\Курсовая\SmartGreenhouse\SmartGreenhouse.Services\obj\Debug\SmartGre.CB588DDF.Up2Date
+D:\Desktop\Арина\Курсовая\SmartGreenhouse\SmartGreenhouse.Services\obj\Debug\SmartGreenhouse.Services.dll
+D:\Desktop\Арина\Курсовая\SmartGreenhouse\SmartGreenhouse.Services\obj\Debug\SmartGreenhouse.Services.pdb

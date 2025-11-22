@@ -10,3 +10,9 @@ C:\Users\miron\OneDrive\Документы\GitHub\CourseWork\SmartGreenhouse\Sma
 C:\Users\miron\OneDrive\Документы\GitHub\CourseWork\SmartGreenhouse\SmartGreenhouse.Core\obj\Debug\SmartGreenhouse.Core.csproj.CoreCompileInputs.cache
 C:\Users\miron\OneDrive\Документы\GitHub\CourseWork\SmartGreenhouse\SmartGreenhouse.Core\obj\Debug\SmartGreenhouse.Core.dll
 C:\Users\miron\OneDrive\Документы\GitHub\CourseWork\SmartGreenhouse\SmartGreenhouse.Core\obj\Debug\SmartGreenhouse.Core.pdb
+D:\Desktop\Арина\Курсовая\SmartGreenhouse\SmartGreenhouse.Core\bin\Debug\SmartGreenhouse.Core.dll
+D:\Desktop\Арина\Курсовая\SmartGreenhouse\SmartGreenhouse.Core\bin\Debug\SmartGreenhouse.Core.pdb
+D:\Desktop\Арина\Курсовая\SmartGreenhouse\SmartGreenhouse.Core\obj\Debug\SmartGreenhouse.Core.csproj.AssemblyReference.cache
+D:\Desktop\Арина\Курсовая\SmartGreenhouse\SmartGreenhouse.Core\obj\Debug\SmartGreenhouse.Core.csproj.CoreCompileInputs.cache
+D:\Desktop\Арина\Курсовая\SmartGreenhouse\SmartGreenhouse.Core\obj\Debug\SmartGreenhouse.Core.dll
+D:\Desktop\Арина\Курсовая\SmartGreenhouse\SmartGreenhouse.Core\obj\Debug\SmartGreenhouse.Core.pdb
