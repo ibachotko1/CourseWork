@@ -58,7 +58,6 @@ D:\Desktop\Арина\Курсовая\SmartGreenhouse\SmartGreenhouse.App\bin\D
 D:\Desktop\Арина\Курсовая\SmartGreenhouse\SmartGreenhouse.App\bin\Debug\SmartGreenhouse.Core.pdb
 D:\Desktop\Арина\Курсовая\SmartGreenhouse\SmartGreenhouse.App\bin\Debug\SmartGreenhouse.Services.pdb
 D:\Desktop\Арина\Курсовая\SmartGreenhouse\SmartGreenhouse.App\obj\Debug\SmartGreenhouse.App.csproj.AssemblyReference.cache
-D:\Desktop\Арина\Курсовая\SmartGreenhouse\SmartGreenhouse.App\obj\Debug\SmartGreenhouse.App.exe.config
 D:\Desktop\Арина\Курсовая\SmartGreenhouse\SmartGreenhouse.App\obj\Debug\ChartWindow.baml
 D:\Desktop\Арина\Курсовая\SmartGreenhouse\SmartGreenhouse.App\obj\Debug\ContractWindow.baml
 D:\Desktop\Арина\Курсовая\SmartGreenhouse\SmartGreenhouse.App\obj\Debug\MainWindow.g.cs
@@ -77,3 +76,4 @@ D:\Desktop\Арина\Курсовая\SmartGreenhouse\SmartGreenhouse.App\obj\D
 D:\Desktop\Арина\Курсовая\SmartGreenhouse\SmartGreenhouse.App\obj\Debug\SmartGre.7BCAD7FF.Up2Date
 D:\Desktop\Арина\Курсовая\SmartGreenhouse\SmartGreenhouse.App\obj\Debug\SmartGreenhouse.App.exe
 D:\Desktop\Арина\Курсовая\SmartGreenhouse\SmartGreenhouse.App\obj\Debug\SmartGreenhouse.App.pdb
+D:\Desktop\Арина\Курсовая\SmartGreenhouse\SmartGreenhouse.App\obj\Debug\SmartGreenhouse.App.exe.config

@@ -29,6 +29,7 @@ namespace SmartGreenhouse.App
         private readonly LightingService _lightingService;
         private readonly SensorDataService _sensorService;
         private readonly DispatcherTimer _timer;
+        private readonly Random _random = new Random();
 
         public MainViewModel()
         {
@@ -697,16 +698,19 @@ namespace SmartGreenhouse.App
 
         private void UpdateData()
         {
-            CurrentData = GenerateTestData();
+            CurrentData = GenerateEnvironmentSnapshot();
 
             if (IsAutoMode)
             {
-                if (ShouldHeat)
+                bool continueHeating = Actuators.Heater && CurrentData.Temperature < 20.0;
+
+                if (ShouldHeat || continueHeating)
                 {
                     Actuators.Heater = true;
-                    CurrentData.Temperature = Math.Min(25.0, CurrentData.Temperature + 0.5);
+                    CurrentData.Temperature = Math.Min(25.0, CurrentData.Temperature + 0.2);
+                    CurrentData.Humidity = Math.Max(30.0, CurrentData.Humidity - 0.15);
                 }
-                else if (CurrentData.Temperature >= 15.0 && CurrentData.Temperature <= 25.0)
+                else if (CurrentData.Temperature >= 20.0 && CurrentData.Temperature <= 25.0)
                 {
                     Actuators.Heater = false;
                 }
@@ -714,7 +718,8 @@ namespace SmartGreenhouse.App
                 if (ShouldWater)
                 {
                     Actuators.WaterValve = true;
-                    CurrentData.SoilMoisture = Math.Min(70.0, CurrentData.SoilMoisture + 1.0);
+                    CurrentData.SoilMoisture = Math.Min(70.0, CurrentData.SoilMoisture + 0.9);
+                    CurrentData.Humidity = Math.Min(85.0, CurrentData.Humidity + 0.25);
                 }
                 else if (CurrentData.SoilMoisture >= 60.0 && CurrentData.SoilMoisture <= 70.0)
                 {
@@ -724,8 +729,9 @@ namespace SmartGreenhouse.App
                 if (ShouldVentilate)
                 {
                     Actuators.Ventilation = true;
-                    CurrentData.Temperature = Math.Max(15.0, CurrentData.Temperature - 0.5);
-                    CurrentData.CO2Level = Math.Max(1000.0, CurrentData.CO2Level - 10);
+                    CurrentData.Temperature = Math.Max(15.0, CurrentData.Temperature - 0.2);
+                    CurrentData.CO2Level = Math.Max(1000.0, CurrentData.CO2Level - 5.0);
+                    CurrentData.Humidity = Math.Max(30.0, CurrentData.Humidity - 0.3);
                 }
                 else if (CurrentData.Temperature <= 25.0 && CurrentData.CO2Level <= 1200)
                 {
@@ -922,14 +928,13 @@ namespace SmartGreenhouse.App
 
         private SensorData GenerateTestData()
         {
-            var random = new Random();
             var now = DateTime.Now;
             
-            double temperature = 15 + random.NextDouble() * 10;
-            double humidity = 50 + random.NextDouble() * 20;
-            double soilMoisture = 60 + random.NextDouble() * 10;
-            double co2Level = 1000 + random.NextDouble() * 200;
-            double lightIntensity = 3000 + random.NextDouble() * 2000;
+            double temperature = 15 + _random.NextDouble() * 10;
+            double humidity = 50 + _random.NextDouble() * 20;
+            double soilMoisture = 60 + _random.NextDouble() * 10;
+            double co2Level = 1000 + _random.NextDouble() * 200;
+            double lightIntensity = 3000 + _random.NextDouble() * 2000;
             
             return new SensorData
             {
@@ -940,6 +945,49 @@ namespace SmartGreenhouse.App
                 LightIntensity = Math.Round(lightIntensity, 0),
                 Timestamp = now
             };
+        }
+
+        private SensorData GenerateEnvironmentSnapshot()
+        {
+            var previous = CurrentData != null && CurrentData.Timestamp != default(DateTime)
+                ? CurrentData
+                : GenerateTestData();
+
+            var timestamp = DateTime.Now;
+            bool isNight = timestamp.Hour < 6 || timestamp.Hour >= 22;
+
+            double temperature = Clamp(previous.Temperature + GetRandomDelta(isNight ? -0.25 : -0.15, 0.12), 10.0, 35.0);
+            double humidityTarget = Actuators.WaterValve ? 65.0 : 45.0;
+            double humidityDrift = GetRandomDelta(-0.4, 0.4) + (humidityTarget - previous.Humidity) * 0.02;
+            double humidity = Clamp(previous.Humidity + humidityDrift, 30.0, 90.0);
+            double soilMoisture = Clamp(previous.SoilMoisture + GetRandomDelta(-0.4, 0.2), 20.0, 90.0);
+            double co2Level = Clamp(previous.CO2Level + GetRandomDelta(-15.0, 15.0), 800.0, 2000.0);
+
+            double targetLight = isNight ? 200.0 : 4200.0;
+            double lightDrift = GetRandomDelta(-150.0, 150.0) + (targetLight - previous.LightIntensity) * 0.05;
+            double lightIntensity = Clamp(previous.LightIntensity + lightDrift, 0.0, 6500.0);
+
+            return new SensorData
+            {
+                Temperature = Math.Round(temperature, 1),
+                Humidity = Math.Round(humidity, 1),
+                SoilMoisture = Math.Round(soilMoisture, 1),
+                CO2Level = Math.Round(co2Level, 0),
+                LightIntensity = Math.Round(lightIntensity, 0),
+                Timestamp = timestamp
+            };
+        }
+
+        private double GetRandomDelta(double min, double max)
+        {
+            return min + _random.NextDouble() * (max - min);
+        }
+
+        private static double Clamp(double value, double min, double max)
+        {
+            if (value < min) return min;
+            if (value > max) return max;
+            return value;
         }
 
         private void UpdateBooleanLogic()
