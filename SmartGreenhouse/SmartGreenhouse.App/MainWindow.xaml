@@ -256,11 +256,45 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
+                    <!-- Пояснение о контрактах -->
+                    <GroupBox Grid.Row="0" Header="О лабораторной работе">
+                        <StackPanel Margin="8">
+                            <TextBlock Text="Контракты программ (Design by Contract)" 
+                                       FontSize="14" FontWeight="SemiBold" 
+                                       Foreground="{StaticResource PrimaryColor}" 
+                                       Margin="0,0,0,8"/>
+                            <TextBlock TextWrapping="Wrap" 
+                                       FontSize="12" 
+                                       Foreground="{StaticResource TextPrimaryColor}" 
+                                       Margin="0,0,0,6">
+                                <Run Text="Контракт - это соглашение, которое описывает, что должно быть истинно ДО и ПОСЛЕ выполнения операции."/>
+                            </TextBlock>
+                            <TextBlock TextWrapping="Wrap" 
+                                       FontSize="12" 
+                                       Foreground="{StaticResource TextPrimaryColor}"
+                                       Margin="0,0,0,6">
+                                • <Run FontWeight="SemiBold" Text="Предусловия (Pre)"/>: условия, которые должны быть выполнены ДО начала операции. Если они не выполнены, операцию нельзя выполнять.
+                            </TextBlock>
+                            <TextBlock TextWrapping="Wrap" 
+                                       FontSize="12" 
+                                       Foreground="{StaticResource TextPrimaryColor}"
+                                       Margin="0,0,0,6">
+                                • <Run FontWeight="SemiBold" Text="Постусловия (Post)"/>: условия, которые должны стать истинными ПОСЛЕ выполнения операции. Если они не выполнены, в операции ошибка.
+                            </TextBlock>
+                                    <TextBlock TextWrapping="Wrap" 
+                                       FontSize="12" 
+                                       Foreground="{StaticResource TextSecondaryColor}"
+                                       FontStyle="Italic">
+                                    </TextBlock>
+                        </StackPanel>
+                    </GroupBox>
+
                     <!-- Панель ввода параметров -->
-                    <GroupBox Grid.Row="0" Header="Параметры ввода">
+                    <GroupBox Grid.Row="1" Header="Параметры ввода">
                         <UniformGrid Columns="4" Margin="8">
                             <StackPanel Margin="5">
                                 <TextBlock Text="Температура, °C:" Style="{StaticResource HeaderTextStyle}"/>
@@ -285,7 +319,7 @@
                     </GroupBox>
 
                     <!-- Общие кнопки -->
-                    <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,8,0,0">
+                    <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,8,0,0">
                         <Button Content="Выполнить все операции" 
                                 Command="{Binding ExecuteAllOperationsCommand}"
                                 Margin="0,0,8,0"/>
@@ -294,7 +328,7 @@
                     </StackPanel>
 
                     <!-- Результаты операций -->
-                    <GroupBox Grid.Row="2" Header="Результаты проверки операций">
+                    <GroupBox Grid.Row="3" Header="Результаты проверки операций">
                         <ScrollViewer VerticalScrollBarVisibility="Auto">
                             <ItemsControl ItemsSource="{Binding OperationResults}" Margin="8">
                                 <ItemsControl.ItemTemplate>
@@ -361,11 +395,59 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
+                    <!-- Пояснение о WP -->
+                    <GroupBox Grid.Row="0" Header="О лабораторной работе">
+                        <StackPanel Margin="8">
+                            <TextBlock Text="Слабейшее предусловие (Weakest Precondition - WP)" 
+                                       FontSize="14" FontWeight="SemiBold" 
+                                       Foreground="{StaticResource PrimaryColor}" 
+                                       Margin="0,0,0,8"/>
+                            <TextBlock TextWrapping="Wrap" 
+                                       FontSize="12" 
+                                       Foreground="{StaticResource TextPrimaryColor}" 
+                                       Margin="0,0,0,6">
+                                WP-калькулятор позволяет вычислить предусловия, необходимые для выполнения программы, двигаясь от постусловия (цели) к началу.
+                            </TextBlock>
+                            <TextBlock TextWrapping="Wrap" 
+                                       FontSize="12" 
+                                       Foreground="{StaticResource TextPrimaryColor}"
+                                       Margin="0,0,0,6">
+                                <Run FontWeight="SemiBold" Text="Правила вычисления:"/>
+                            </TextBlock>
+                            <TextBlock TextWrapping="Wrap" 
+                                       FontSize="11" 
+                                       Foreground="{StaticResource TextPrimaryColor}"
+                                       Margin="12,0,0,4">
+                                • <Run FontWeight="SemiBold" Text="Присваивание"/>: wp(x := e, R) = R[x/e] (заменяем x на e в R)
+                            </TextBlock>
+                            <TextBlock TextWrapping="Wrap" 
+                                       FontSize="11" 
+                                       Foreground="{StaticResource TextPrimaryColor}"
+                                       Margin="12,0,0,4">
+                                • <Run FontWeight="SemiBold" Text="Условный оператор"/>: wp(if B then S₁ else S₂, R) = (B ∧ wp(S₁,R)) ∨ (¬B ∧ wp(S₂,R))
+                            </TextBlock>
+                            <TextBlock TextWrapping="Wrap" 
+                                       FontSize="11" 
+                                       Foreground="{StaticResource TextPrimaryColor}"
+                                       Margin="12,0,0,4">
+                                • <Run FontWeight="SemiBold" Text="Последовательность"/>: wp(S₁; S₂, R) = wp(S₁, wp(S₂, R)) (справа налево)
+                            </TextBlock>
+                            <TextBlock TextWrapping="Wrap" 
+                                       FontSize="11" 
+                                       Foreground="{StaticResource TextSecondaryColor}"
+                                       FontStyle="Italic"
+                                       Margin="0,6,0,0">
+                                Пример: для кода "x := 5" с постусловием "x > 0" предусловием будет "5 > 0" (истина).
+                            </TextBlock>
+                        </StackPanel>
+                    </GroupBox>
+
                     <!-- Выбор примера -->
-                    <GroupBox Grid.Row="0" Header="Пример операции">
+                    <GroupBox Grid.Row="1" Header="Пример операции">
                         <StackPanel Margin="8">
                             <ComboBox ItemsSource="{Binding WpExamples}" 
                                       SelectedItem="{Binding SelectedWpExample}"
@@ -378,7 +460,7 @@
                     </GroupBox>
 
                     <!-- Цель (Post) -->
-                    <GroupBox Grid.Row="1" Header="Цель (Post)">
+                    <GroupBox Grid.Row="2" Header="Цель (Post)">
                         <Grid Margin="8">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
@@ -401,7 +483,7 @@
                     </GroupBox>
 
                     <!-- Редактор кода -->
-                    <GroupBox Grid.Row="2" Header="Редактор кода фрагмента">
+                    <GroupBox Grid.Row="3" Header="Редактор кода фрагмента">
                         <StackPanel Margin="8">
                             <TextBlock Text="Поддерживаемые операторы: присваивание (x := expr), ветвление (if (B) { S1 } else { S2 }), последовательность" 
                                        FontSize="11" 
@@ -422,7 +504,7 @@
                     </GroupBox>
 
                     <!-- Результаты -->
-                    <GroupBox Grid.Row="3" Header="Результаты расчета WP">
+                    <GroupBox Grid.Row="4" Header="Результаты расчета WP">
                         <Grid Margin="8">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
@@ -482,10 +564,69 @@
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
 
+                    <!-- Пояснение об инвариантах -->
+                    <GroupBox Grid.Row="0" Header="О лабораторной работе">
+                        <StackPanel Margin="8">
+                            <TextBlock Text="Инварианты и вариант-функции циклов" 
+                                       FontSize="14" FontWeight="SemiBold" 
+                                       Foreground="{StaticResource PrimaryColor}" 
+                                       Margin="0,0,0,8"/>
+                            <TextBlock TextWrapping="Wrap" 
+                                       FontSize="12" 
+                                       Foreground="{StaticResource TextPrimaryColor}" 
+                                       Margin="0,0,0,6">
+                                <Run FontWeight="SemiBold" Text="Инвариант цикла"/> - это условие, которое остается истинным на каждой итерации цикла.
+                            </TextBlock>
+                            <TextBlock TextWrapping="Wrap" 
+                                       FontSize="12" 
+                                       Foreground="{StaticResource TextPrimaryColor}"
+                                       Margin="0,0,0,6">
+                                <Run FontWeight="SemiBold" Text="Вариант-функция t"/> - это выражение, которое монотонно убывает на каждой итерации, гарантируя завершение цикла.
+                            </TextBlock>
+                            <TextBlock TextWrapping="Wrap" 
+                                       FontSize="12" 
+                                       Foreground="{StaticResource TextPrimaryColor}"
+                                       Margin="0,0,0,6">
+                                <Run FontWeight="SemiBold" Text="Условия верификации (VC):"/>
+                            </TextBlock>
+                            <TextBlock TextWrapping="Wrap" 
+                                       FontSize="11" 
+                                       Foreground="{StaticResource TextPrimaryColor}"
+                                       Margin="12,0,0,4">
+                                1. <Run FontWeight="SemiBold" Text="Pre ⇒ Inv"/> - предусловие влечет инвариант
+                            </TextBlock>
+                            <TextBlock TextWrapping="Wrap" 
+                                       FontSize="11" 
+                                       Foreground="{StaticResource TextPrimaryColor}"
+                                       Margin="12,0,0,4">
+                                2. <Run FontWeight="SemiBold" Text="(Inv ∧ B) ⇒ wp(S, Inv)"/> - инвариант сохраняется после тела цикла
+                            </TextBlock>
+                            <TextBlock TextWrapping="Wrap" 
+                                       FontSize="11" 
+                                       Foreground="{StaticResource TextPrimaryColor}"
+                                       Margin="12,0,0,4">
+                                3. <Run FontWeight="SemiBold" Text="(Inv ∧ ¬B) ⇒ Post"/> - инвариант и выход из цикла влекут постусловие
+                            </TextBlock>
+                            <TextBlock TextWrapping="Wrap" 
+                                       FontSize="11" 
+                                       Foreground="{StaticResource TextPrimaryColor}"
+                                       Margin="12,0,0,6">
+                                4. <Run FontWeight="SemiBold" Text="t' t"/> - вариант-функция убывает
+                            </TextBlock>
+                            <TextBlock TextWrapping="Wrap" 
+                                       FontSize="11" 
+                                       Foreground="{StaticResource TextSecondaryColor}"
+                                       FontStyle="Italic">
+                                Пример: при подсчете суммы температур инвариант: "res = sum(temperature[0..j-1])", вариант: "t = n - j".
+                            </TextBlock>
+                        </StackPanel>
+                    </GroupBox>
+
                     <!-- Панель данных -->
-                    <GroupBox Grid.Row="0" Header="Данные">
+                    <GroupBox Grid.Row="1" Header="Данные">
                         <Grid Margin="8">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
@@ -529,7 +670,7 @@
                     </GroupBox>
 
                     <!-- Режимы -->
-                    <GroupBox Grid.Row="1" Header="Режимы">
+                    <GroupBox Grid.Row="2" Header="Режимы">
                         <StackPanel Margin="8">
                             <TextBlock Text="Режим:" Style="{StaticResource HeaderTextStyle}"/>
                             <ComboBox SelectedItem="{Binding SelectedLoopMode}" 
@@ -541,7 +682,7 @@
                     </GroupBox>
 
                     <!-- Блок инвариант/вариант -->
-                    <GroupBox Grid.Row="2" Header="Инвариант и Вариант-функция">
+                    <GroupBox Grid.Row="3" Header="Инвариант и Вариант-функция">
                         <StackPanel Margin="8">
                             <TextBlock Text="Инвариант (словами):" Style="{StaticResource HeaderTextStyle}"/>
                             <TextBlock Text="{Binding InvariantDescription}" 
@@ -569,7 +710,7 @@
                     </GroupBox>
 
                     <!-- Проверка сохранения (wp) -->
-                    <GroupBox Grid.Row="3" Header="Проверка сохранения (wp)">
+                    <GroupBox Grid.Row="4" Header="Проверка сохранения (wp)">
                         <Grid Margin="8">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
@@ -592,7 +733,7 @@
                     </GroupBox>
 
                     <!-- Кнопка выполнения -->
-                    <GroupBox Grid.Row="4" Header="Выполнение">
+                    <GroupBox Grid.Row="5" Header="Выполнение">
                         <StackPanel Margin="8">
                             <Button Content="Выполнить обработку данных" 
                                     Command="{Binding ExecuteLoopAndShowResultCommand}"
@@ -601,7 +742,7 @@
                     </GroupBox>
 
                     <!-- Результат -->
-                    <GroupBox Grid.Row="5" Header="Результат">
+                    <GroupBox Grid.Row="6" Header="Результат">
                         <TextBlock Text="{Binding InvariantResult}" 
                                    TextWrapping="Wrap" 
                                    FontSize="13"
