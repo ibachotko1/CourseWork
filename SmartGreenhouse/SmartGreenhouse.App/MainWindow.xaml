@@ -7,13 +7,14 @@
         xmlns:invariants="clr-namespace:SmartGreenhouse.Core.Invariants;assembly=SmartGreenhouse.Core"
         mc:Ignorable="d"
         Title="Система управления умной теплицей" Height="700" Width="1000"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource BackgroundColor}">
 
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="BoolToVisibility"/>
     </Window.Resources>
 
-    <Grid Margin="10">
+    <Grid Margin="10" Background="{StaticResource BackgroundColor}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -22,15 +23,15 @@
 
         <!-- Заголовок -->
         <TextBlock Grid.Row="0" Text="Умная теплица - Панель управления" 
-                   FontSize="20" FontWeight="Bold" Foreground="#1B5E20"
+                   Style="{StaticResource TitleTextStyle}"
                    HorizontalAlignment="Center" Margin="0,0,0,20"/>
 
         <!-- Основное содержимое -->
         <TabControl Grid.Row="1">
             <!-- Вкладка мониторинга -->
             <TabItem Header="Мониторинг">
-                <ScrollViewer>
-                    <Grid Margin="10">
+                <ScrollViewer Background="{StaticResource BackgroundColor}">
+                    <Grid Margin="8" Background="{StaticResource BackgroundColor}">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
@@ -44,58 +45,58 @@
 
                         <!-- Статусы систем управления -->
                         <GroupBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
-                                 Header="Статус систем управления" Margin="0,0,0,10">
-                            <UniformGrid Columns="5" Rows="1" Margin="10">
-                                <StackPanel Margin="5">
-                                    <TextBlock Text="Полив:" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,5"/>
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                        <Ellipse Width="15" Height="15" 
+                                 Header="Статус систем управления">
+                            <UniformGrid Columns="5" Rows="1" Margin="8">
+                                <StackPanel Margin="4">
+                                    <TextBlock Text="Полив:" Style="{StaticResource HeaderTextStyle}"/>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,4,0,0">
+                                        <Ellipse Width="12" Height="12" 
                                                  Fill="{Binding Actuators.WaterValve, Converter={StaticResource BoolToColor}, ConverterParameter='#4CAF50|#F44336'}" 
-                                                 Stroke="Black" StrokeThickness="1" Margin="0,0,5,0"/>
+                                                 Style="{StaticResource StatusIndicatorStyle}"/>
                                         <TextBlock Text="{Binding Actuators.WaterValve, Converter={StaticResource BoolToText}, ConverterParameter='Не работает|Работает'}" 
                                                    Style="{StaticResource ValueTextStyle}"/>
                                     </StackPanel>
                                 </StackPanel>
 
-                                <StackPanel Margin="5">
-                                    <TextBlock Text="Обогрев:" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,5"/>
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                        <Ellipse Width="15" Height="15" 
+                                <StackPanel Margin="4">
+                                    <TextBlock Text="Обогрев:" Style="{StaticResource HeaderTextStyle}"/>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,4,0,0">
+                                        <Ellipse Width="12" Height="12" 
                                                  Fill="{Binding Actuators.Heater, Converter={StaticResource BoolToColor}, ConverterParameter='#4CAF50|#F44336'}" 
-                                                 Stroke="Black" StrokeThickness="1" Margin="0,0,5,0"/>
+                                                 Style="{StaticResource StatusIndicatorStyle}"/>
                                         <TextBlock Text="{Binding Actuators.Heater, Converter={StaticResource BoolToText}, ConverterParameter='Не работает|Работает'}" 
                                                    Style="{StaticResource ValueTextStyle}"/>
                                     </StackPanel>
                                 </StackPanel>
 
-                                <StackPanel Margin="5">
-                                    <TextBlock Text="Вентиляция:" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,5"/>
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                        <Ellipse Width="15" Height="15" 
+                                <StackPanel Margin="4">
+                                    <TextBlock Text="Вентиляция:" Style="{StaticResource HeaderTextStyle}"/>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,4,0,0">
+                                        <Ellipse Width="12" Height="12" 
                                                  Fill="{Binding Actuators.Ventilation, Converter={StaticResource BoolToColor}, ConverterParameter='#4CAF50|#F44336'}" 
-                                                 Stroke="Black" StrokeThickness="1" Margin="0,0,5,0"/>
+                                                 Style="{StaticResource StatusIndicatorStyle}"/>
                                         <TextBlock Text="{Binding Actuators.Ventilation, Converter={StaticResource BoolToText}, ConverterParameter='Не работает|Работает'}" 
                                                    Style="{StaticResource ValueTextStyle}"/>
                                     </StackPanel>
                                 </StackPanel>
 
-                                <StackPanel Margin="5">
-                                    <TextBlock Text="Освещение:" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,5"/>
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                        <Ellipse Width="15" Height="15" 
+                                <StackPanel Margin="4">
+                                    <TextBlock Text="Освещение:" Style="{StaticResource HeaderTextStyle}"/>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,4,0,0">
+                                        <Ellipse Width="12" Height="12" 
                                                  Fill="{Binding Actuators.Lights, Converter={StaticResource BoolToColor}, ConverterParameter='#4CAF50|#F44336'}" 
-                                                 Stroke="Black" StrokeThickness="1" Margin="0,0,5,0"/>
+                                                 Style="{StaticResource StatusIndicatorStyle}"/>
                                         <TextBlock Text="{Binding Actuators.Lights, Converter={StaticResource BoolToText}, ConverterParameter='Не работает|Работает'}" 
                                                    Style="{StaticResource ValueTextStyle}"/>
                                     </StackPanel>
                                 </StackPanel>
 
-                                <StackPanel Margin="5">
-                                    <TextBlock Text="Защита от солнца:" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,5"/>
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                        <Ellipse Width="15" Height="15" 
+                                <StackPanel Margin="4">
+                                    <TextBlock Text="Защита от солнца:" Style="{StaticResource HeaderTextStyle}"/>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,4,0,0">
+                                        <Ellipse Width="12" Height="12" 
                                                  Fill="{Binding Actuators.SunProtection, Converter={StaticResource BoolToColor}, ConverterParameter='#4CAF50|#F44336'}" 
-                                                 Stroke="Black" StrokeThickness="1" Margin="0,0,5,0"/>
+                                                 Style="{StaticResource StatusIndicatorStyle}"/>
                                         <TextBlock Text="{Binding Actuators.SunProtection, Converter={StaticResource BoolToText}, ConverterParameter='Не работает|Работает'}" 
                                                    Style="{StaticResource ValueTextStyle}"/>
                                     </StackPanel>
@@ -105,8 +106,8 @@
 
                         <!-- Данные датчиков -->
                         <GroupBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" 
-                                 Header="Данные с датчиков" Margin="0,0,0,10">
-                            <UniformGrid Columns="3" Rows="2" Margin="10">
+                                 Header="Данные с датчиков">
+                            <UniformGrid Columns="3" Rows="2" Margin="8">
                                 <StackPanel Margin="5">
                                     <TextBlock Text="Температура:" Style="{StaticResource HeaderTextStyle}"/>
                                     <TextBlock Text="{Binding CurrentData.Temperature, StringFormat='{}{0}°C'}" 
@@ -140,20 +141,20 @@
                         </GroupBox>
 
                         <!-- Справка -->
-                        <GroupBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Header="Справка" Margin="0,0,0,10">
-                            <StackPanel Margin="10">
+                        <GroupBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Header="Справка">
+                            <StackPanel Margin="8">
                                 <TextBlock Text="Нормальные значения (система не принимает решений):" 
                                            Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,8"/>
                                 <TextBlock Text="• Температура: 15-25°C" 
-                                           Style="{StaticResource ValueTextStyle}" Margin="10,2,0,2"/>
+                                           Style="{StaticResource ValueTextStyle}" Margin="12,4,0,4"/>
                                 <TextBlock Text="• Влажность воздуха: 50-70%" 
-                                           Style="{StaticResource ValueTextStyle}" Margin="10,2,0,2"/>
+                                           Style="{StaticResource ValueTextStyle}" Margin="12,4,0,4"/>
                                 <TextBlock Text="• Влажность почвы: 60-70%" 
-                                           Style="{StaticResource ValueTextStyle}" Margin="10,2,0,2"/>
+                                           Style="{StaticResource ValueTextStyle}" Margin="12,4,0,4"/>
                                 <TextBlock Text="• Уровень CO₂: 1000-1200 ppm" 
-                                           Style="{StaticResource ValueTextStyle}" Margin="10,2,0,2"/>
+                                           Style="{StaticResource ValueTextStyle}" Margin="12,4,0,4"/>
                                 <TextBlock Text="• Освещенность: 3000-5000 lux" 
-                                           Style="{StaticResource ValueTextStyle}" Margin="10,2,0,2"/>
+                                           Style="{StaticResource ValueTextStyle}" Margin="12,4,0,4"/>
                             </StackPanel>
                         </GroupBox>
 
@@ -163,14 +164,14 @@
                                 <Button Content="Открыть график параметров" Command="{Binding OpenChartCommand}"
                                         HorizontalAlignment="Right" Margin="0,0,0,5" Padding="10,5"/>
                                 <DataGrid ItemsSource="{Binding SensorHistory}" AutoGenerateColumns="False"
-                                         MaxHeight="200">
+                                         MaxHeight="200" CanUserResizeColumns="True">
                                     <DataGrid.Columns>
-                                        <DataGridTextColumn Header="Температура, °C" Binding="{Binding Temperature, StringFormat='{}{0:F1}'}" Width="*"/>
-                                        <DataGridTextColumn Header="Влажность воздуха, %" Binding="{Binding Humidity, StringFormat='{}{0:F1}'}" Width="*"/>
-                                        <DataGridTextColumn Header="Влажность почвы, %" Binding="{Binding SoilMoisture, StringFormat='{}{0:F1}'}" Width="*"/>
-                                        <DataGridTextColumn Header="Уровень CO₂, ppm" Binding="{Binding CO2Level, StringFormat='{}{0:F0}'}" Width="*"/>
-                                        <DataGridTextColumn Header="Освещенность, lux" Binding="{Binding LightIntensity, StringFormat='{}{0:F0}'}" Width="*"/>
-                                        <DataGridTextColumn Header="Время" Binding="{Binding Timestamp, StringFormat='{}{0:HH:mm:ss}'}" Width="*"/>
+                                        <DataGridTextColumn Header="Температура, °C" Binding="{Binding Temperature, StringFormat='{}{0:F1}'}" Width="120"/>
+                                        <DataGridTextColumn Header="Влажность воздуха, %" Binding="{Binding Humidity, StringFormat='{}{0:F1}'}" Width="140"/>
+                                        <DataGridTextColumn Header="Влажность почвы, %" Binding="{Binding SoilMoisture, StringFormat='{}{0:F1}'}" Width="130"/>
+                                        <DataGridTextColumn Header="Уровень CO₂, ppm" Binding="{Binding CO2Level, StringFormat='{}{0:F0}'}" Width="120"/>
+                                        <DataGridTextColumn Header="Освещенность, lux" Binding="{Binding LightIntensity, StringFormat='{}{0:F0}'}" Width="130"/>
+                                        <DataGridTextColumn Header="Время" Binding="{Binding Timestamp, StringFormat='{}{0:HH:mm:ss}'}" Width="80"/>
                                     </DataGrid.Columns>
                                 </DataGrid>
                             </StackPanel>
@@ -181,8 +182,8 @@
 
             <!-- Вкладка управления -->
             <TabItem Header="Управление">
-                <ScrollViewer>
-                    <Grid Margin="10">
+                <ScrollViewer Background="{StaticResource BackgroundColor}">
+                    <Grid Margin="8" Background="{StaticResource BackgroundColor}">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
@@ -190,75 +191,43 @@
                         </Grid.RowDefinitions>
 
                         <!-- Ручное управление системами -->
-                        <GroupBox Grid.Row="0" Header="Ручное управление системами" Margin="0,0,0,10">
-                            <UniformGrid Columns="3" Rows="2" Margin="10">
+                        <GroupBox Grid.Row="0" Header="Ручное управление системами">
+                            <UniformGrid Columns="3" Rows="2" Margin="8">
                                 <Button Content="Полив: ВКЛ/ВЫКЛ" 
                                         Command="{Binding ToggleWaterCommand}"
-                                        Padding="15,10" 
-                                        FontSize="12" 
-                                        FontWeight="Bold"
-                                        Margin="5"
                                         Background="{Binding Actuators.WaterValve, Converter={StaticResource BoolToColor}, ConverterParameter='#4CAF50|#F44336'}"/>
                                 
                                 <Button Content="Обогрев: ВКЛ/ВЫКЛ" 
                                         Command="{Binding ToggleHeatingCommand}"
-                                        Padding="15,10" 
-                                        FontSize="12" 
-                                        FontWeight="Bold"
-                                        Margin="5"
                                         Background="{Binding Actuators.Heater, Converter={StaticResource BoolToColor}, ConverterParameter='#4CAF50|#F44336'}"/>
                                 
                                 <Button Content="Вентиляция: ВКЛ/ВЫКЛ" 
                                         Command="{Binding ToggleVentilationCommand}"
-                                        Padding="15,10" 
-                                        FontSize="12" 
-                                        FontWeight="Bold"
-                                        Margin="5"
                                         Background="{Binding Actuators.Ventilation, Converter={StaticResource BoolToColor}, ConverterParameter='#4CAF50|#F44336'}"/>
                                 
                                 <Button Content="Освещение: ВКЛ/ВЫКЛ" 
                                         Command="{Binding ToggleLightingCommand}"
-                                        Padding="15,10" 
-                                        FontSize="12" 
-                                        FontWeight="Bold"
-                                        Margin="5"
                                         Background="{Binding Actuators.Lights, Converter={StaticResource BoolToColor}, ConverterParameter='#4CAF50|#F44336'}"/>
                                 
                                 <Button Content="Защита от солнца: ВКЛ/ВЫКЛ" 
                                         Command="{Binding ToggleSunProtectionCommand}"
-                                        Padding="15,10" 
-                                        FontSize="12" 
-                                        FontWeight="Bold"
-                                        Margin="5"
                                         Background="{Binding Actuators.SunProtection, Converter={StaticResource BoolToColor}, ConverterParameter='#4CAF50|#F44336'}"/>
                             </UniformGrid>
                         </GroupBox>
 
                         <!-- Автоматическое управление -->
-                        <GroupBox Grid.Row="1" Header="Автоматическое управление" Margin="0,0,0,10">
-                            <UniformGrid Columns="3" Margin="10">
+                        <GroupBox Grid.Row="1" Header="Автоматическое управление">
+                            <UniformGrid Columns="3" Margin="8">
                                 <Button Content="Запустить все системы" 
                                         Command="{Binding RunAllSystemsCommand}"
-                                        Padding="15,10" 
-                                        FontSize="12" 
-                                        FontWeight="Bold"
-                                        Margin="5"
                                         Background="#4CAF50"/>
                                 
                                 <Button Content="Остановить все системы" 
                                         Command="{Binding StopAllSystemsCommand}"
-                                        Padding="15,10" 
-                                        FontSize="12" 
-                                        FontWeight="Bold"
-                                        Margin="5"
                                         Background="#F44336"/>
                                 
                                 <Button Content="Обработать данные датчиков" 
                                         Command="{Binding ProcessDataCommand}"
-                                        Padding="15,10" 
-                                        FontSize="12" 
-                                        FontWeight="Bold"
-                                        Margin="5"
                                         Background="#2196F3"/>
                             </UniformGrid>
                         </GroupBox>
@@ -269,8 +238,9 @@
                                 <TextBlock Text="{Binding OperationLog}" 
                                            TextWrapping="Wrap" 
                                            FontFamily="Consolas" 
-                                           FontSize="10" 
-                                           Margin="10"/>
+                                           FontSize="11" 
+                                           Foreground="{StaticResource TextPrimaryColor}"
+                                           Margin="8"/>
                             </ScrollViewer>
                         </GroupBox>
                     </Grid>
@@ -282,7 +252,7 @@
                 <TabControl>
                     <!-- ЛР1: Контракты -->
                     <TabItem Header="ЛР1: Контракты">
-                <Grid Margin="10">
+                <Grid Margin="8" Background="{StaticResource BackgroundColor}">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
@@ -290,8 +260,8 @@
                     </Grid.RowDefinitions>
 
                     <!-- Панель ввода параметров -->
-                    <GroupBox Grid.Row="0" Header="Параметры ввода" Margin="0,0,0,10">
-                        <UniformGrid Columns="4" Margin="10">
+                    <GroupBox Grid.Row="0" Header="Параметры ввода">
+                        <UniformGrid Columns="4" Margin="8">
                             <StackPanel Margin="5">
                                 <TextBlock Text="Температура, °C:" Style="{StaticResource HeaderTextStyle}"/>
                                 <TextBox Text="{Binding InputTemperature, UpdateSourceTrigger=PropertyChanged}" Margin="0,2,0,5"/>
@@ -315,27 +285,21 @@
                     </GroupBox>
 
                     <!-- Общие кнопки -->
-                    <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,10">
+                    <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,8,0,0">
                         <Button Content="Выполнить все операции" 
                                 Command="{Binding ExecuteAllOperationsCommand}"
-                                Padding="20,8" 
-                                FontSize="14" 
-                                FontWeight="Bold"
-                                Margin="0,0,10,0"/>
+                                Margin="0,0,8,0"/>
                         <Button Content="Показать контракт" 
-                                Command="{Binding ShowAllContractsCommand}"
-                                Padding="20,8" 
-                                FontSize="14"
-                                FontWeight="Bold"/>
+                                Command="{Binding ShowAllContractsCommand}"/>
                     </StackPanel>
 
                     <!-- Результаты операций -->
                     <GroupBox Grid.Row="2" Header="Результаты проверки операций">
                         <ScrollViewer VerticalScrollBarVisibility="Auto">
-                            <ItemsControl ItemsSource="{Binding OperationResults}" Margin="10">
+                            <ItemsControl ItemsSource="{Binding OperationResults}" Margin="8">
                                 <ItemsControl.ItemTemplate>
                                     <DataTemplate>
-                                        <Border BorderBrush="LightGray" BorderThickness="1" Margin="0,0,0,10" Padding="10" Background="White">
+                                        <Border BorderBrush="{StaticResource BorderColor}" BorderThickness="1" Margin="0,0,0,8" Padding="12" Background="{StaticResource SurfaceColor}" CornerRadius="4">
                                             <Grid>
                                                 <Grid.ColumnDefinitions>
                                                     <ColumnDefinition Width="*"/>
@@ -344,39 +308,41 @@
                                                 </Grid.ColumnDefinitions>
 
                                                 <StackPanel Grid.Column="0">
-                                                    <TextBlock Text="{Binding OperationName}" FontSize="14" FontWeight="Bold" Margin="0,0,0,5"/>
-                                                    <TextBlock Text="Предусловия:" FontWeight="Bold" Margin="0,5,0,2"/>
+                                                    <TextBlock Text="{Binding OperationName}" FontSize="13" FontWeight="SemiBold" Foreground="{StaticResource TextPrimaryColor}" Margin="0,0,0,6"/>
+                                                    <TextBlock Text="Предусловия:" Style="{StaticResource HeaderTextStyle}" Margin="0,4,0,2"/>
                                                     <TextBlock Text="{Binding PreConditionsDescription}" 
                                                                TextWrapping="Wrap" 
-                                                               FontSize="10" 
-                                                               Margin="10,0,0,5"/>
-                                                    <TextBlock Text="Постусловия:" FontWeight="Bold" Margin="0,5,0,2"/>
+                                                               FontSize="11" 
+                                                               Foreground="{StaticResource TextSecondaryColor}"
+                                                               Margin="12,0,0,6"/>
+                                                    <TextBlock Text="Постусловия:" Style="{StaticResource HeaderTextStyle}" Margin="0,4,0,2"/>
                                                     <TextBlock Text="{Binding PostConditionsDescription}" 
                                                                TextWrapping="Wrap" 
-                                                               FontSize="10" 
-                                                               Margin="10,0,0,0"/>
+                                                               FontSize="11" 
+                                                               Foreground="{StaticResource TextSecondaryColor}"
+                                                               Margin="12,0,0,0"/>
                                                 </StackPanel>
 
-                                                <StackPanel Grid.Column="1" HorizontalAlignment="Center" Margin="10,0">
-                                                    <TextBlock Text="Pre" FontWeight="Bold" Margin="0,0,0,5"/>
-                                                    <Ellipse Width="25" Height="25" 
+                                                <StackPanel Grid.Column="1" HorizontalAlignment="Center" Margin="12,0">
+                                                    <TextBlock Text="Pre" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,6"/>
+                                                    <Ellipse Width="24" Height="24" 
                                                              Fill="{Binding PreConditionColor}" 
-                                                             Stroke="Black" 
+                                                             Stroke="{StaticResource BorderColor}" 
                                                              StrokeThickness="1"/>
                                                     <TextBlock Text="{Binding PreConditionMet, StringFormat='{}{0}'}" 
                                                                HorizontalAlignment="Center" 
-                                                               Margin="0,3,0,0" FontSize="9"/>
+                                                               Margin="0,4,0,0" FontSize="10" Foreground="{StaticResource TextSecondaryColor}"/>
                                                 </StackPanel>
 
-                                                <StackPanel Grid.Column="2" HorizontalAlignment="Center" Margin="10,0">
-                                                    <TextBlock Text="Post" FontWeight="Bold" Margin="0,0,0,5"/>
-                                                    <Ellipse Width="25" Height="25" 
+                                                <StackPanel Grid.Column="2" HorizontalAlignment="Center" Margin="12,0">
+                                                    <TextBlock Text="Post" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,6"/>
+                                                    <Ellipse Width="24" Height="24" 
                                                              Fill="{Binding PostConditionColor}" 
-                                                             Stroke="Black" 
+                                                             Stroke="{StaticResource BorderColor}" 
                                                              StrokeThickness="1"/>
                                                     <TextBlock Text="{Binding PostConditionMet, StringFormat='{}{0}'}" 
                                                                HorizontalAlignment="Center" 
-                                                               Margin="0,3,0,0" FontSize="9"/>
+                                                               Margin="0,4,0,0" FontSize="10" Foreground="{StaticResource TextSecondaryColor}"/>
                                                 </StackPanel>
                                             </Grid>
                                         </Border>
@@ -390,7 +356,7 @@
 
             <!-- ЛР2: WP-калькулятор -->
             <TabItem Header="ЛР2: WP-калькулятор">
-                <Grid Margin="10">
+                <Grid Margin="8" Background="{StaticResource BackgroundColor}">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
@@ -399,21 +365,21 @@
                     </Grid.RowDefinitions>
 
                     <!-- Выбор примера -->
-                    <GroupBox Grid.Row="0" Header="Пример операции" Margin="0,0,0,10">
-                        <StackPanel Margin="10">
+                    <GroupBox Grid.Row="0" Header="Пример операции">
+                        <StackPanel Margin="8">
                             <ComboBox ItemsSource="{Binding WpExamples}" 
                                       SelectedItem="{Binding SelectedWpExample}"
                                       DisplayMemberPath="Name"
                                       Margin="0,0,0,5"/>
                             <TextBlock Text="Выберите пример операции теплицы или используйте свой код" 
-                                       FontSize="10" 
-                                       Foreground="Gray"/>
+                                       FontSize="11" 
+                                       Foreground="{StaticResource TextSecondaryColor}"/>
                         </StackPanel>
                     </GroupBox>
 
                     <!-- Цель (Post) -->
-                    <GroupBox Grid.Row="1" Header="Цель (Post)" Margin="0,0,0,10">
-                        <Grid Margin="10">
+                    <GroupBox Grid.Row="1" Header="Цель (Post)">
+                        <Grid Margin="8">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
@@ -435,12 +401,12 @@
                     </GroupBox>
 
                     <!-- Редактор кода -->
-                    <GroupBox Grid.Row="2" Header="Редактор кода фрагмента" Margin="0,0,0,10">
-                        <StackPanel Margin="10">
+                    <GroupBox Grid.Row="2" Header="Редактор кода фрагмента">
+                        <StackPanel Margin="8">
                             <TextBlock Text="Поддерживаемые операторы: присваивание (x := expr), ветвление (if (B) { S1 } else { S2 }), последовательность" 
-                                       FontSize="10" 
-                                       Foreground="Gray" 
-                                       Margin="0,0,0,5"/>
+                                       FontSize="11" 
+                                       Foreground="{StaticResource TextSecondaryColor}" 
+                                       Margin="0,0,0,6"/>
                             <TextBox Text="{Binding WpCode}" 
                                      AcceptsReturn="True" 
                                      TextWrapping="Wrap"
@@ -450,17 +416,14 @@
                                      VerticalScrollBarVisibility="Auto"/>
                             <Button Content="Рассчитать WP" 
                                     Command="{Binding CalculateWpCommand}"
-                                    Padding="15,8" 
-                                    FontSize="12" 
-                                    FontWeight="Bold"
                                     HorizontalAlignment="Left"
-                                    Margin="0,10,0,0"/>
+                                    Margin="0,8,0,0"/>
                         </StackPanel>
                     </GroupBox>
 
                     <!-- Результаты -->
                     <GroupBox Grid.Row="3" Header="Результаты расчета WP">
-                        <Grid Margin="10">
+                        <Grid Margin="8">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="*"/>
@@ -468,29 +431,32 @@
                             </Grid.RowDefinitions>
 
                             <!-- Пошаговый трейс -->
-                            <GroupBox Grid.Row="0" Header="Пошаговый трейс" Margin="0,0,0,10">
+                            <GroupBox Grid.Row="0" Header="Пошаговый трейс">
                                 <ScrollViewer VerticalScrollBarVisibility="Auto" MaxHeight="200">
                                     <TextBlock Text="{Binding WpTrace}" 
                                                TextWrapping="Wrap" 
                                                FontFamily="Consolas" 
-                                               FontSize="10" 
-                                               Margin="5"/>
+                                               FontSize="11" 
+                                               Foreground="{StaticResource TextPrimaryColor}"
+                                               Margin="8"/>
                                 </ScrollViewer>
                             </GroupBox>
 
                             <!-- Итоговое предусловие -->
-                            <GroupBox Grid.Row="1" Header="Итоговое предусловие (WP)" Margin="0,0,0,10">
+                            <GroupBox Grid.Row="1" Header="Итоговое предусловие (WP)">
                                 <ScrollViewer VerticalScrollBarVisibility="Auto">
-                                    <StackPanel Margin="5">
-                                        <TextBlock Text="Краткая запись:" FontWeight="Bold" Margin="0,0,0,5"/>
+                                    <StackPanel Margin="8">
+                                        <TextBlock Text="Краткая запись:" Style="{StaticResource HeaderTextStyle}"/>
                                         <TextBlock Text="{Binding WpFinalResult}" 
                                                    FontFamily="Consolas" 
                                                    FontSize="11" 
-                                                   Margin="10,0,0,10"/>
-                                        <TextBlock Text="Расшифровка:" FontWeight="Bold" Margin="0,0,0,5"/>
+                                                   Foreground="{StaticResource TextPrimaryColor}"
+                                                   Margin="12,4,0,8"/>
+                                        <TextBlock Text="Расшифровка:" Style="{StaticResource HeaderTextStyle}"/>
                                         <TextBlock Text="{Binding WpFinalResultDescription}" 
                                                    FontSize="11" 
-                                                   Margin="10,0,0,0"/>
+                                                   Foreground="{StaticResource TextPrimaryColor}"
+                                                   Margin="12,4,0,0"/>
                                     </StackPanel>
                                 </ScrollViewer>
                             </GroupBox>
@@ -498,9 +464,8 @@
                             <!-- Кнопка показать триаду -->
                             <Button Grid.Row="2" Content="Показать триаду" 
                                     Command="{Binding ShowWpTriadCommand}"
-                                    Padding="15,8" 
-                                    FontSize="12"
-                                    HorizontalAlignment="Left"/>
+                                    HorizontalAlignment="Left"
+                                    Margin="0,8,0,0"/>
                         </Grid>
                     </GroupBox>
                 </Grid>
@@ -508,8 +473,8 @@
 
             <!-- ЛР3: Инварианты -->
             <TabItem Header="ЛР3: Инварианты">
-                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
-                    <Grid Margin="10">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Background="{StaticResource BackgroundColor}">
+                    <Grid Margin="8" Background="{StaticResource BackgroundColor}">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
@@ -520,8 +485,8 @@
                         </Grid.RowDefinitions>
 
                     <!-- Панель данных -->
-                    <GroupBox Grid.Row="0" Header="Данные" Margin="0,0,0,10">
-                        <Grid Margin="10">
+                    <GroupBox Grid.Row="0" Header="Данные">
+                        <Grid Margin="8">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
@@ -549,8 +514,7 @@
 
                             <Button Grid.Row="1" Content="Сгенерировать данные датчиков температуры" 
                                     Command="{Binding GenerateLoopDataCommand}"
-                                    Padding="15,8" FontSize="12" FontWeight="Bold"
-                                    HorizontalAlignment="Left" Margin="0,0,0,10"/>
+                                    HorizontalAlignment="Left" Margin="0,8,0,0"/>
 
                             <DataGrid Grid.Row="2" ItemsSource="{Binding LoopDataTable}" 
                                       AutoGenerateColumns="False" 
@@ -565,45 +529,48 @@
                     </GroupBox>
 
                     <!-- Режимы -->
-                    <GroupBox Grid.Row="1" Header="Режимы" Margin="0,0,0,10">
-                        <StackPanel Margin="10">
-                            <TextBlock Text="Режим:" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,5"/>
+                    <GroupBox Grid.Row="1" Header="Режимы">
+                        <StackPanel Margin="8">
+                            <TextBlock Text="Режим:" Style="{StaticResource HeaderTextStyle}"/>
                             <ComboBox SelectedItem="{Binding SelectedLoopMode}" 
                                       ItemsSource="{Binding AvailableLoopModes}" 
-                                      Margin="0,0,0,10"/>
+                                      Margin="0,4,0,8"/>
                             <TextBlock Text="Режимы: Сумма температур (для среднего) / Подсчет критических моментов (температура &lt; 15°C, включение обогревателей) / Максимальная температура" 
-                                       FontSize="10" Foreground="Gray"/>
+                                       FontSize="11" Foreground="{StaticResource TextSecondaryColor}"/>
                         </StackPanel>
                     </GroupBox>
 
                     <!-- Блок инвариант/вариант -->
-                    <GroupBox Grid.Row="2" Header="Инвариант и Вариант-функция" Margin="0,0,0,10">
-                        <StackPanel Margin="10">
-                            <TextBlock Text="Инвариант (словами):" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <GroupBox Grid.Row="2" Header="Инвариант и Вариант-функция">
+                        <StackPanel Margin="8">
+                            <TextBlock Text="Инвариант (словами):" Style="{StaticResource HeaderTextStyle}"/>
                             <TextBlock Text="{Binding InvariantDescription}" 
                                        TextWrapping="Wrap" 
-                                       Margin="0,0,0,15"/>
+                                       Foreground="{StaticResource TextPrimaryColor}"
+                                       Margin="0,4,0,12"/>
 
-                            <TextBlock Text="Инвариант (формула):" FontWeight="Bold" Margin="0,0,0,5"/>
+                            <TextBlock Text="Инвариант (формула):" Style="{StaticResource HeaderTextStyle}"/>
                             <TextBlock Text="{Binding InvariantFormula}" 
                                        FontFamily="Consolas" 
                                        FontSize="11"
-                                       Margin="0,0,0,15"/>
+                                       Foreground="{StaticResource TextPrimaryColor}"
+                                       Margin="0,4,0,12"/>
 
-                            <TextBlock Text="Вариант-функция t:" FontWeight="Bold" Margin="0,0,0,5"/>
+                            <TextBlock Text="Вариант-функция t:" Style="{StaticResource HeaderTextStyle}"/>
                             <TextBlock Text="{Binding VariantFunction}" 
                                        FontFamily="Consolas" 
                                        FontSize="11"
-                                       Margin="0,0,0,10"/>
+                                       Foreground="{StaticResource TextPrimaryColor}"
+                                       Margin="0,4,0,8"/>
 
-                            <TextBlock Text="Текущее значение t:" FontWeight="Bold" Margin="0,0,0,5"/>
-                            <TextBlock Text="{Binding VariantValue}" FontSize="14" FontWeight="Bold"/>
+                            <TextBlock Text="Текущее значение t:" Style="{StaticResource HeaderTextStyle}"/>
+                            <TextBlock Text="{Binding VariantValue}" FontSize="13" FontWeight="SemiBold" Foreground="{StaticResource PrimaryColor}" Margin="0,4,0,0"/>
                         </StackPanel>
                     </GroupBox>
 
                     <!-- Проверка сохранения (wp) -->
-                    <GroupBox Grid.Row="3" Header="Проверка сохранения (wp)" Margin="0,0,0,10">
-                        <Grid Margin="10">
+                    <GroupBox Grid.Row="3" Header="Проверка сохранения (wp)">
+                        <Grid Margin="8">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="*"/>
@@ -611,35 +578,36 @@
 
                             <Button Grid.Row="0" Content="Проверить условия верификации (VC)" 
                                     Command="{Binding CheckVerificationConditionsCommand}"
-                                    Padding="15,8" FontSize="12" FontWeight="Bold"
-                                    HorizontalAlignment="Left" Margin="0,0,0,10"/>
+                                    HorizontalAlignment="Left" Margin="0,0,0,8"/>
 
                             <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" MaxHeight="200">
                                 <TextBlock Text="{Binding VerificationConditions}" 
                                            TextWrapping="Wrap" 
                                            FontFamily="Consolas" 
-                                           FontSize="10"/>
+                                           FontSize="11"
+                                           Foreground="{StaticResource TextPrimaryColor}"
+                                           Margin="8"/>
                             </ScrollViewer>
                         </Grid>
                     </GroupBox>
 
                     <!-- Кнопка выполнения -->
-                    <GroupBox Grid.Row="4" Header="Выполнение" Margin="0,10,0,10">
-                        <StackPanel Margin="10">
+                    <GroupBox Grid.Row="4" Header="Выполнение">
+                        <StackPanel Margin="8">
                             <Button Content="Выполнить обработку данных" 
                                     Command="{Binding ExecuteLoopAndShowResultCommand}"
-                                    Padding="20,10" FontSize="14" FontWeight="Bold"
                                     HorizontalAlignment="Left"/>
                         </StackPanel>
                     </GroupBox>
 
                     <!-- Результат -->
-                    <GroupBox Grid.Row="5" Header="Результат" Margin="0,0,0,10">
+                    <GroupBox Grid.Row="5" Header="Результат">
                         <TextBlock Text="{Binding InvariantResult}" 
                                    TextWrapping="Wrap" 
-                                   FontSize="14"
-                                   FontWeight="Bold"
-                                   Margin="10"/>
+                                   FontSize="13"
+                                   FontWeight="SemiBold"
+                                   Foreground="{StaticResource TextPrimaryColor}"
+                                   Margin="8"/>
                     </GroupBox>
                     </Grid>
                 </ScrollViewer>
@@ -650,95 +618,103 @@
                         <TabControl>
                             <!-- Вкладка со справкой -->
                             <TabItem Header="Справка">
-                        <ScrollViewer VerticalScrollBarVisibility="Auto">
-                            <StackPanel Margin="15">
+                        <ScrollViewer VerticalScrollBarVisibility="Auto" Background="{StaticResource BackgroundColor}">
+                            <StackPanel Margin="12" Background="{StaticResource BackgroundColor}">
                                 <TextBlock Text="Булевы функции в системе управления умной теплицей" 
-                                           FontSize="18" FontWeight="Bold" 
-                                           Foreground="#1B5E20" 
-                                           Margin="0,0,0,15"/>
+                                           FontSize="18" FontWeight="SemiBold" 
+                                           Foreground="{StaticResource PrimaryDarkColor}" 
+                                           Margin="0,0,0,12"/>
                                 
-                                <TextBlock TextWrapping="Wrap" FontSize="12" Margin="0,0,0,15">
-                                    <Run Text="Система управления умной теплицей использует булевы функции для принятия решений о включении/выключении различных систем:" FontWeight="Bold"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="12" Foreground="{StaticResource TextPrimaryColor}" Margin="0,0,0,12">
+                                    <Run Text="Система управления умной теплицей использует булевы функции для принятия решений о включении/выключении различных систем:" FontWeight="SemiBold"/>
                                 </TextBlock>
                                 
-                                <GroupBox Header="Примеры булевых функций в теплице" Margin="0,0,0,15">
-                                    <StackPanel Margin="10">
-                                        <TextBlock Text="1. Полив:" FontWeight="Bold" Margin="0,0,0,5"/>
+                                <GroupBox Header="Примеры булевых функций в теплице">
+                                    <StackPanel Margin="8">
+                                        <TextBlock Text="1. Полив:" Style="{StaticResource HeaderTextStyle}"/>
                                         <TextBlock Text="   Формула: Низкая влажность почвы" 
                                                    FontFamily="Consolas" 
-                                                   Margin="20,0,0,10"/>
+                                                   Foreground="{StaticResource TextPrimaryColor}"
+                                                   Margin="12,2,0,6"/>
                                         <TextBlock Text="   x1 = (влажность почвы &lt; 60%)" 
                                                    FontFamily="Consolas" 
-                                                   Foreground="DarkBlue"
-                                                   Margin="20,0,0,15"/>
+                                                   Foreground="{StaticResource AccentColor}"
+                                                   Margin="12,0,0,12"/>
                                         
-                                        <TextBlock Text="2. Обогрев:" FontWeight="Bold" Margin="0,0,0,5"/>
+                                        <TextBlock Text="2. Обогрев:" Style="{StaticResource HeaderTextStyle}"/>
                                         <TextBlock Text="   Формула: Низкая температура" 
                                                    FontFamily="Consolas" 
-                                                   Margin="20,0,0,10"/>
+                                                   Foreground="{StaticResource TextPrimaryColor}"
+                                                   Margin="12,2,0,6"/>
                                         <TextBlock Text="   x1 = (температура &lt; 15°C)" 
                                                    FontFamily="Consolas" 
-                                                   Foreground="DarkBlue"
-                                                   Margin="20,0,0,15"/>
+                                                   Foreground="{StaticResource AccentColor}"
+                                                   Margin="12,0,0,12"/>
                                         
-                                        <TextBlock Text="3. Вентиляция:" FontWeight="Bold" Margin="0,0,0,5"/>
+                                        <TextBlock Text="3. Вентиляция:" Style="{StaticResource HeaderTextStyle}"/>
                                         <TextBlock Text="   Формула: Высокая температура ИЛИ высокий CO₂" 
                                                    FontFamily="Consolas" 
-                                                   Margin="20,0,0,10"/>
+                                                   Foreground="{StaticResource TextPrimaryColor}"
+                                                   Margin="12,2,0,6"/>
                                         <TextBlock Text="   x1 | x2, где x1=(температура &gt; 25°C), x2=(CO₂ &gt; 1200 ppm)" 
                                                    FontFamily="Consolas" 
-                                                   Foreground="DarkBlue"
-                                                   Margin="20,0,0,15"/>
+                                                   Foreground="{StaticResource AccentColor}"
+                                                   Margin="12,0,0,12"/>
                                         
-                                        <TextBlock Text="4. Освещение:" FontWeight="Bold" Margin="0,0,0,5"/>
+                                        <TextBlock Text="4. Освещение:" Style="{StaticResource HeaderTextStyle}"/>
                                         <TextBlock Text="   Формула: Низкая освещенность ИЛИ (ночь И нужны саженцы)" 
                                                    FontFamily="Consolas" 
-                                                   Margin="20,0,0,10"/>
+                                                   Foreground="{StaticResource TextPrimaryColor}"
+                                                   Margin="12,2,0,6"/>
                                         <TextBlock Text="   x1 | (x2 &amp; x3), где x1=(освещенность &lt; 3000 lux), x2=ночь, x3=нужны саженцы" 
                                                    FontFamily="Consolas" 
-                                                   Foreground="DarkBlue"
-                                                   Margin="20,0,0,15"/>
+                                                   Foreground="{StaticResource AccentColor}"
+                                                   Margin="12,0,0,12"/>
                                         
-                                        <TextBlock Text="5. Сложная логика (импликация):" FontWeight="Bold" Margin="0,0,0,5"/>
+                                        <TextBlock Text="5. Сложная логика (импликация):" Style="{StaticResource HeaderTextStyle}"/>
                                         <TextBlock Text="   Если включен полив, то должна быть нормальная температура" 
                                                    FontFamily="Consolas" 
-                                                   Margin="20,0,0,10"/>
+                                                   Foreground="{StaticResource TextPrimaryColor}"
+                                                   Margin="12,2,0,6"/>
                                         <TextBlock Text="   x1 -&gt; x2, где x1=полив включен, x2=(температура &gt; 5°C)" 
                                                    FontFamily="Consolas" 
-                                                   Foreground="DarkBlue"
-                                                   Margin="20,0,0,15"/>
+                                                   Foreground="{StaticResource AccentColor}"
+                                                   Margin="12,0,0,12"/>
                                     </StackPanel>
                                 </GroupBox>
                                 
-                                <GroupBox Header="Зачем нужны таблицы истинности и DNF/KNF?" Margin="0,0,0,15">
-                                    <StackPanel Margin="10">
-                                        <TextBlock TextWrapping="Wrap" Margin="0,0,0,10">
-                                            <Run Text="• Таблица истинности" FontWeight="Bold"/> показывает все возможные комбинации условий и результат принятия решения
+                                <GroupBox Header="Зачем нужны таблицы истинности и DNF/KNF?">
+                                    <StackPanel Margin="8">
+                                        <TextBlock TextWrapping="Wrap" Foreground="{StaticResource TextPrimaryColor}" Margin="0,0,0,8">
+                                            <Run Text="• Таблица истинности" FontWeight="SemiBold"/> показывает все возможные комбинации условий и результат принятия решения
                                         </TextBlock>
-                                        <TextBlock TextWrapping="Wrap" Margin="0,0,0,10">
-                                            <Run Text="• DNF (дизъюнктивная нормальная форма)" FontWeight="Bold"/> показывает все случаи, когда система должна включиться
+                                        <TextBlock TextWrapping="Wrap" Foreground="{StaticResource TextPrimaryColor}" Margin="0,0,0,8">
+                                            <Run Text="• DNF (дизъюнктивная нормальная форма)" FontWeight="SemiBold"/> показывает все случаи, когда система должна включиться
                                         </TextBlock>
-                                        <TextBlock TextWrapping="Wrap" Margin="0,0,0,10">
-                                            <Run Text="• KNF (конъюнктивная нормальная форма)" FontWeight="Bold"/> показывает все случаи, когда система должна быть выключена
+                                        <TextBlock TextWrapping="Wrap" Foreground="{StaticResource TextPrimaryColor}" Margin="0,0,0,8">
+                                            <Run Text="• KNF (конъюнктивная нормальная форма)" FontWeight="SemiBold"/> показывает все случаи, когда система должна быть выключена
                                         </TextBlock>
-                                        <TextBlock TextWrapping="Wrap" Margin="0,0,0,10">
-                                            <Run Text="• Проверка эквивалентности" FontWeight="Bold"/> позволяет убедиться, что разные формулировки логики дают одинаковый результат
+                                        <TextBlock TextWrapping="Wrap" Foreground="{StaticResource TextPrimaryColor}" Margin="0,0,0,8">
+                                            <Run Text="• Проверка эквивалентности" FontWeight="SemiBold"/> позволяет убедиться, что разные формулировки логики дают одинаковый результат
                                         </TextBlock>
                                     </StackPanel>
                                 </GroupBox>
                                 
                                 <GroupBox Header="Примеры формул для тестирования">
-                                    <StackPanel Margin="10">
-                                        <TextBlock Text="Попробуйте эти формулы в вкладке 'По формуле':" FontWeight="Bold" Margin="0,0,0,10"/>
+                                    <StackPanel Margin="8">
+                                        <TextBlock Text="Попробуйте эти формулы в вкладке 'По формуле':" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,8"/>
                                         <TextBlock Text="• (x1 | x2) -&gt; x3  (если высокая температура ИЛИ высокий CO₂, то включить вентиляцию)" 
                                                    FontFamily="Consolas" 
-                                                   Margin="20,0,0,5"/>
+                                                   Foreground="{StaticResource AccentColor}"
+                                                   Margin="12,0,0,4"/>
                                         <TextBlock Text="• x1 &amp; !x2  (низкая влажность почвы И полив не включен)" 
                                                    FontFamily="Consolas" 
-                                                   Margin="20,0,0,5"/>
+                                                   Foreground="{StaticResource AccentColor}"
+                                                   Margin="12,0,0,4"/>
                                         <TextBlock Text="• (x1 ^ x2) = x3  (исключающее ИЛИ: либо обогрев, либо вентиляция, но не оба)" 
                                                    FontFamily="Consolas" 
-                                                   Margin="20,0,0,5"/>
+                                                   Foreground="{StaticResource AccentColor}"
+                                                   Margin="12,0,0,4"/>
                                     </StackPanel>
                                 </GroupBox>
                             </StackPanel>
@@ -746,8 +722,8 @@
                             </TabItem>
                             <!-- Вкладка "По номеру" -->
                             <TabItem Header="По номеру">
-                        <ScrollViewer VerticalScrollBarVisibility="Auto">
-                            <Grid Margin="10">
+                        <ScrollViewer VerticalScrollBarVisibility="Auto" Background="{StaticResource BackgroundColor}">
+                            <Grid Margin="8" Background="{StaticResource BackgroundColor}">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto"/>
                                     <RowDefinition Height="Auto"/>
@@ -756,68 +732,57 @@
                                 </Grid.RowDefinitions>
 
                                 <!-- Ввод параметров -->
-                                <GroupBox Grid.Row="0" Header="Параметры функции" Margin="0,0,0,10">
-                                    <UniformGrid Columns="2" Margin="10">
-                                        <StackPanel Margin="5">
-                                            <TextBlock Text="Количество переменных (n):" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,5"/>
-                                            <TextBox Text="{Binding BooleanN, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,5"/>
-                                            <TextBlock Text="n ∈ [1..10]" FontSize="10" Foreground="Gray"/>
+                                <GroupBox Grid.Row="0" Header="Параметры функции">
+                                    <UniformGrid Columns="2" Margin="8">
+                                        <StackPanel Margin="4">
+                                            <TextBlock Text="Количество переменных (n):" Style="{StaticResource HeaderTextStyle}"/>
+                                            <TextBox Text="{Binding BooleanN, UpdateSourceTrigger=PropertyChanged}" Margin="0,4,0,4"/>
+                                            <TextBlock Text="n ∈ [1..10]" FontSize="11" Foreground="{StaticResource TextSecondaryColor}"/>
                                         </StackPanel>
-                                        <StackPanel Margin="5">
-                                            <TextBlock Text="Номер функции (num):" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,5"/>
-                                            <TextBox Text="{Binding BooleanNum, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,5"/>
-                                            <TextBlock Text="num ∈ [0..2^(2^n)−1]" FontSize="10" Foreground="Gray"/>
+                                        <StackPanel Margin="4">
+                                            <TextBlock Text="Номер функции (num):" Style="{StaticResource HeaderTextStyle}"/>
+                                            <TextBox Text="{Binding BooleanNum, UpdateSourceTrigger=PropertyChanged}" Margin="0,4,0,4"/>
+                                            <TextBlock Text="num ∈ [0..2^(2^n)−1]" FontSize="11" Foreground="{StaticResource TextSecondaryColor}"/>
                                         </StackPanel>
                                     </UniformGrid>
                                 </GroupBox>
 
                                 <!-- Пояснение -->
-                                <GroupBox Grid.Row="1" Header="Пояснение" Margin="0,0,0,10">
-                                    <StackPanel Margin="10">
-                                        <TextBlock Text="Связь с теплицей:" FontWeight="Bold" Margin="0,0,0,5"/>
+                                <GroupBox Grid.Row="1" Header="Пояснение">
+                                    <StackPanel Margin="8">
+                                        <TextBlock Text="Связь с теплицей:" Style="{StaticResource HeaderTextStyle}"/>
                                         <TextBlock Text="Номер функции определяет логику принятия решений. Например, функция может описывать условия включения полива, обогрева или вентиляции на основе комбинаций показаний датчиков." 
                                                    TextWrapping="Wrap" 
-                                                   FontSize="10" 
-                                                   Foreground="DarkGreen"
-                                                   Margin="0,0,0,10"/>
+                                                   FontSize="11" 
+                                                   Foreground="{StaticResource PrimaryColor}"
+                                                   Margin="0,4,0,8"/>
                                         <TextBlock Text="{Binding BooleanNumberExplanation}" 
                                                    TextWrapping="Wrap" 
                                                    FontSize="11"
-                                                   Margin="0,0,0,5"/>
+                                                   Foreground="{StaticResource TextPrimaryColor}"
+                                                   Margin="0,0,0,6"/>
                                         <TextBlock Text="Двоичное представление num длиной 2^n соответствует значениям функции на всех кортежах переменных (от младшего бита к старшему)." 
                                                    TextWrapping="Wrap" 
-                                                   FontSize="10" 
-                                                   Foreground="Gray"/>
+                                                   FontSize="11" 
+                                                   Foreground="{StaticResource TextSecondaryColor}"/>
                                     </StackPanel>
                                 </GroupBox>
 
                                 <!-- Кнопки действий -->
-                                <GroupBox Grid.Row="2" Header="Действия" Margin="0,0,0,10">
-                                    <UniformGrid Columns="3" Margin="10">
+                                <GroupBox Grid.Row="2" Header="Действия">
+                                    <UniformGrid Columns="3" Margin="8">
                                         <Button Content="Таблица истинности" 
-                                                Command="{Binding BuildTruthTableFromNumberCommand}"
-                                                Padding="15,8" 
-                                                FontSize="12" 
-                                                FontWeight="Bold"
-                                                Margin="5"/>
+                                                Command="{Binding BuildTruthTableFromNumberCommand}"/>
                                         <Button Content="DNF" 
-                                                Command="{Binding GenerateDNFFromNumberCommand}"
-                                                Padding="15,8" 
-                                                FontSize="12" 
-                                                FontWeight="Bold"
-                                                Margin="5"/>
+                                                Command="{Binding GenerateDNFFromNumberCommand}"/>
                                         <Button Content="KNF" 
-                                                Command="{Binding GenerateKNFFromNumberCommand}"
-                                                Padding="15,8" 
-                                                FontSize="12" 
-                                                FontWeight="Bold"
-                                                Margin="5"/>
+                                                Command="{Binding GenerateKNFFromNumberCommand}"/>
                                     </UniformGrid>
                                 </GroupBox>
 
                                 <!-- Результаты -->
                                 <GroupBox Grid.Row="3" Header="Результаты">
-                                    <Grid Margin="10">
+                                    <Grid Margin="8">
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto"/>
                                             <RowDefinition Height="*"/>
@@ -825,13 +790,14 @@
                                         <Button Grid.Row="0" Content="Скопировать в буфер" 
                                                 Command="{Binding CopyBooleanResultCommand}"
                                                 HorizontalAlignment="Right"
-                                                Padding="10,5"
-                                                Margin="0,0,0,5"/>
+                                                Margin="0,0,0,8"/>
                                         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
                                             <TextBlock Text="{Binding BooleanNumberResult}" 
                                                        TextWrapping="Wrap" 
                                                        FontFamily="Consolas" 
-                                                       FontSize="11"/>
+                                                       FontSize="11"
+                                                       Foreground="{StaticResource TextPrimaryColor}"
+                                                       Margin="8"/>
                                         </ScrollViewer>
                                     </Grid>
                                 </GroupBox>
@@ -841,8 +807,8 @@
 
                             <!-- Вкладка "По формуле" -->
                             <TabItem Header="По формуле">
-                        <ScrollViewer VerticalScrollBarVisibility="Auto">
-                            <Grid Margin="10">
+                        <ScrollViewer VerticalScrollBarVisibility="Auto" Background="{StaticResource BackgroundColor}">
+                            <Grid Margin="8" Background="{StaticResource BackgroundColor}">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto"/>
                                     <RowDefinition Height="Auto"/>
@@ -851,82 +817,80 @@
                                 </Grid.RowDefinitions>
 
                                 <!-- Ввод формулы -->
-                                <GroupBox Grid.Row="0" Header="Формула" Margin="0,0,0,10">
-                                    <StackPanel Margin="10">
-                                        <TextBlock Text="Введите булеву формулу (связь с теплицей):" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,5"/>
+                                <GroupBox Grid.Row="0" Header="Формула">
+                                    <StackPanel Margin="8">
+                                        <TextBlock Text="Введите булеву формулу (связь с теплицей):" Style="{StaticResource HeaderTextStyle}"/>
                                         <TextBox Text="{Binding BooleanFormula, UpdateSourceTrigger=PropertyChanged}" 
                                                  FontFamily="Consolas" 
                                                  FontSize="12"
                                                  MinHeight="40"
                                                  TextWrapping="Wrap"
                                                  AcceptsReturn="True"
-                                                 Margin="0,0,0,5"/>
+                                                 Margin="0,4,0,6"/>
                                         <TextBlock Text="Операторы: !/not (отрицание), &amp;/and (конъюнкция), |/or (дизъюнкция), ^/xor (исключающее ИЛИ), -&gt; (импликация), = (эквивалентность)" 
-                                                   FontSize="10" 
-                                                   Foreground="Gray"
+                                                   FontSize="11" 
+                                                   Foreground="{StaticResource TextSecondaryColor}"
                                                    TextWrapping="Wrap"/>
                                         
                                         <!-- Кнопки с примерами формул для теплицы -->
-                                        <TextBlock Text="Примеры формул для теплицы:" FontWeight="Bold" Margin="0,10,0,5"/>
-                                        <UniformGrid Columns="3" Margin="0,0,0,5">
+                                        <TextBlock Text="Примеры формул для теплицы:" Style="{StaticResource HeaderTextStyle}" Margin="0,8,0,6"/>
+                                        <UniformGrid Columns="3" Margin="0,0,0,6">
                                             <Button Content="Вентиляция: (x1 | x2)" 
                                                     Command="{Binding LoadExampleFormulaCommand}"
                                                     CommandParameter="(x1 | x2)"
-                                                    Padding="8,4"
-                                                    FontSize="10"
+                                                    Padding="8,6"
+                                                    FontSize="11"
                                                     Margin="2"/>
                                             <Button Content="Полив: x1 &amp; !x2" 
                                                     Command="{Binding LoadExampleFormulaCommand}"
                                                     CommandParameter="x1 &amp; !x2"
-                                                    Padding="8,4"
-                                                    FontSize="10"
+                                                    Padding="8,6"
+                                                    FontSize="11"
                                                     Margin="2"/>
                                             <Button Content="Импликация: (x1 | x2) -&gt; x3" 
                                                     Command="{Binding LoadExampleFormulaCommand}"
                                                     CommandParameter="(x1 | x2) -&gt; x3"
-                                                    Padding="8,4"
-                                                    FontSize="10"
+                                                    Padding="8,6"
+                                                    FontSize="11"
                                                     Margin="2"/>
                                         </UniformGrid>
                                         
                                         <TextBlock Text="Где: x1=высокая температура, x2=высокий CO₂, x3=включить вентиляцию" 
-                                                   FontSize="9" 
-                                                   Foreground="DarkGray"
+                                                   FontSize="10" 
+                                                   Foreground="{StaticResource TextSecondaryColor}"
                                                    FontStyle="Italic"
-                                                   Margin="0,5,0,0"/>
+                                                   Margin="0,4,0,0"/>
                                     </StackPanel>
                                 </GroupBox>
 
                                 <!-- Кнопка разбора -->
-                                <GroupBox Grid.Row="1" Header="Действия" Margin="0,0,0,10">
-                                    <StackPanel Margin="10">
+                                <GroupBox Grid.Row="1" Header="Действия">
+                                    <StackPanel Margin="8">
                                         <Button Content="Разобрать и вычислить" 
                                                 Command="{Binding ParseAndEvaluateFormulaCommand}"
-                                                Padding="20,10" 
-                                                FontSize="14" 
-                                                FontWeight="Bold"
                                                 HorizontalAlignment="Left"/>
                                     </StackPanel>
                                 </GroupBox>
 
                                 <!-- Информация о формуле -->
-                                <GroupBox Grid.Row="2" Header="Информация о формуле" Margin="0,0,0,10">
-                                    <StackPanel Margin="10">
+                                <GroupBox Grid.Row="2" Header="Информация о формуле">
+                                    <StackPanel Margin="8">
                                         <TextBlock Text="{Binding BooleanFormulaInfo}" 
                                                    TextWrapping="Wrap" 
                                                    FontSize="11"
-                                                   Margin="0,0,0,5"/>
+                                                   Foreground="{StaticResource TextPrimaryColor}"
+                                                   Margin="0,0,0,6"/>
                                         <TextBlock Text="{Binding BooleanFormulaCost}" 
                                                    TextWrapping="Wrap" 
                                                    FontSize="11"
-                                                   FontWeight="Bold"
-                                                   Foreground="DarkBlue"/>
+                                                   FontWeight="SemiBold"
+                                                   Foreground="{StaticResource AccentColor}"/>
                                     </StackPanel>
                                 </GroupBox>
 
                                 <!-- Результаты -->
                                 <GroupBox Grid.Row="3" Header="Результаты">
-                                    <Grid Margin="10">
+                                    <Grid Margin="8">
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto"/>
                                             <RowDefinition Height="*"/>
@@ -934,13 +898,14 @@
                                         <Button Grid.Row="0" Content="Скопировать в буфер" 
                                                 Command="{Binding CopyBooleanResultCommand}"
                                                 HorizontalAlignment="Right"
-                                                Padding="10,5"
-                                                Margin="0,0,0,5"/>
+                                                Margin="0,0,0,8"/>
                                         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
                                             <TextBlock Text="{Binding BooleanFormulaResult}" 
                                                        TextWrapping="Wrap" 
                                                        FontFamily="Consolas" 
-                                                       FontSize="11"/>
+                                                       FontSize="11"
+                                                       Foreground="{StaticResource TextPrimaryColor}"
+                                                       Margin="8"/>
                                         </ScrollViewer>
                                     </Grid>
                                 </GroupBox>
@@ -950,8 +915,8 @@
 
                             <!-- Вкладка "Сравнение" -->
                             <TabItem Header="Сравнение">
-                        <ScrollViewer VerticalScrollBarVisibility="Auto">
-                            <Grid Margin="10">
+                        <ScrollViewer VerticalScrollBarVisibility="Auto" Background="{StaticResource BackgroundColor}">
+                            <Grid Margin="8" Background="{StaticResource BackgroundColor}">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto"/>
                                     <RowDefinition Height="Auto"/>
@@ -959,53 +924,50 @@
                                 </Grid.RowDefinitions>
 
                                 <!-- Ввод функций -->
-                                <GroupBox Grid.Row="0" Header="Функции для сравнения" Margin="0,0,0,10">
-                    <StackPanel Margin="10">
-                                        <TextBlock Text="Сравнение логики принятия решений:" FontWeight="Bold" Margin="0,0,0,5"/>
+                                <GroupBox Grid.Row="0" Header="Функции для сравнения">
+                    <StackPanel Margin="8">
+                                        <TextBlock Text="Сравнение логики принятия решений:" Style="{StaticResource HeaderTextStyle}"/>
                                         <TextBlock Text="Проверьте, эквивалентны ли две формулировки логики управления теплицей. Например, сравните прямую формулу с её DNF-представлением." 
                                                    TextWrapping="Wrap" 
-                                                   FontSize="10" 
-                                                   Foreground="DarkGreen"
-                                                   Margin="0,0,0,10"/>
+                                                   FontSize="11" 
+                                                   Foreground="{StaticResource PrimaryColor}"
+                                                   Margin="0,4,0,8"/>
                                         <UniformGrid Columns="2" Margin="0,0,0,0">
-                                            <StackPanel Margin="5">
-                                                <TextBlock Text="Функция 1 (номер или формула):" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,5"/>
+                                            <StackPanel Margin="4">
+                                                <TextBlock Text="Функция 1 (номер или формула):" Style="{StaticResource HeaderTextStyle}"/>
                                                 <TextBox Text="{Binding BooleanCompareFunction1, UpdateSourceTrigger=PropertyChanged}" 
                                                          FontFamily="Consolas" 
                                                          FontSize="11"
                                                          MinHeight="60"
                                                          TextWrapping="Wrap"
                                                          AcceptsReturn="True"
-                                                         Margin="0,0,0,5"/>
+                                                         Margin="0,4,0,4"/>
                                                 <TextBlock Text="Пример: 11 или (x1 &amp; !x2) | x3" 
-                                                           FontSize="9" 
-                                                           Foreground="Gray"/>
+                                                           FontSize="10" 
+                                                           Foreground="{StaticResource TextSecondaryColor}"/>
                                             </StackPanel>
-                                            <StackPanel Margin="5">
-                                                <TextBlock Text="Функция 2 (номер или формула):" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,5"/>
+                                            <StackPanel Margin="4">
+                                                <TextBlock Text="Функция 2 (номер или формула):" Style="{StaticResource HeaderTextStyle}"/>
                                                 <TextBox Text="{Binding BooleanCompareFunction2, UpdateSourceTrigger=PropertyChanged}" 
                                                          FontFamily="Consolas" 
                                                          FontSize="11"
                                                          MinHeight="60"
                                                          TextWrapping="Wrap"
                                                          AcceptsReturn="True"
-                                                         Margin="0,0,0,5"/>
+                                                         Margin="0,4,0,4"/>
                                                 <TextBlock Text="Пример: DNF от функции 1" 
-                                                           FontSize="9" 
-                                                           Foreground="Gray"/>
+                                                           FontSize="10" 
+                                                           Foreground="{StaticResource TextSecondaryColor}"/>
                                             </StackPanel>
                                         </UniformGrid>
                                     </StackPanel>
                                 </GroupBox>
 
                                 <!-- Кнопка сравнения -->
-                                <GroupBox Grid.Row="1" Header="Действия" Margin="0,0,0,10">
-                                    <StackPanel Margin="10">
+                                <GroupBox Grid.Row="1" Header="Действия">
+                                    <StackPanel Margin="8">
                                         <Button Content="Эквивалентны?" 
                                                 Command="{Binding CheckEquivalenceCommand}"
-                                                Padding="20,10" 
-                                                FontSize="14" 
-                                                FontWeight="Bold"
                                                 HorizontalAlignment="Left"/>
                                     </StackPanel>
                                 </GroupBox>
@@ -1013,12 +975,13 @@
                                 <!-- Результат сравнения -->
                                 <GroupBox Grid.Row="2" Header="Результат сравнения">
                                     <ScrollViewer VerticalScrollBarVisibility="Auto">
-                                        <StackPanel Margin="10">
+                                        <StackPanel Margin="8">
                                             <TextBlock Text="{Binding BooleanEquivalenceResult}" 
                                                        TextWrapping="Wrap" 
                                                        FontFamily="Consolas" 
                                                        FontSize="12"
-                                                       FontWeight="Bold"/>
+                                                       FontWeight="SemiBold"
+                                                       Foreground="{StaticResource TextPrimaryColor}"/>
                     </StackPanel>
                 </ScrollViewer>
                                 </GroupBox>
@@ -1032,12 +995,12 @@
         </TabControl>
 
         <!-- Статус бар -->
-        <StatusBar Grid.Row="2" Margin="0,10,0,0">
+        <StatusBar Grid.Row="2" Margin="0,8,0,0">
             <StatusBarItem>
-                <TextBlock Text="{Binding StatusMessage}"/>
+                <TextBlock Text="{Binding StatusMessage}" Foreground="{StaticResource TextPrimaryColor}"/>
             </StatusBarItem>
             <StatusBarItem HorizontalAlignment="Right">
-                <TextBlock Text="{Binding CurrentTime, StringFormat='Время: {0:HH:mm:ss}'}"/>
+                <TextBlock Text="{Binding CurrentTime, StringFormat='Время: {0:HH:mm:ss}'}" Foreground="{StaticResource TextSecondaryColor}"/>
             </StatusBarItem>
         </StatusBar>
     </Grid>
